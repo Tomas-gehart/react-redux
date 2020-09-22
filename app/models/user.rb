@@ -9,7 +9,11 @@ class User < ApplicationRecord
     has_many :messages,
         foreign_key: :##,
         class_name: :Message,
+<<<<<<< HEAD
         primary_key: :id 
+=======
+        primary_key: :id  
+>>>>>>> tmp
     
       has_many :channels,
         foreign_key: :##,
