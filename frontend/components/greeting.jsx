@@ -1,4 +1,4 @@
-import GreetingContainer from "./greeting/greeting_container";
+import GreetingContainer from "greeting_container";
 
 const Greeting = () => (
     <div>

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from './actions/session_actions';
-import Greeting from './greeting';
+import Greeting from 'greeting';
 
 const mstp = ({ session, entities: { users } }) => 
     {return {currentUser: users[session.id]};
