@@ -20,14 +20,14 @@ export const receiveErrors = () => ({
 export const signup = user => dispatch => (
     APIUTIL.signup(user).then(
         user => (dispatch(receiveCurrentUsers(user)),
-        errors => dispatch(receiveErrors(errors.responseJSON)))
+        errors => dispatch(receiveErrors(errors.responseJSON))
     ))
 );
 
 export const login = user => dispatch => (
     APIUTIL.login(user).then(
         user => (dispatch(receiveCurrentUser(user)),
-        errors => dispatch(receiveErrors(errors.responseJSON)))
+        errors => dispatch(receiveErrors(errors.responseJSON))
     ))
 );
 

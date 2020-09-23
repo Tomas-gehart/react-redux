@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SessionForm from 'session_form';
+import SessionForm from './session_form';
 
 const mstp = ({ errors }) => {
     return {errors: errors, formType: "Sign Up!",};

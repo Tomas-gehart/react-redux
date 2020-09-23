@@ -5,21 +5,21 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true
     validates :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
+#
+    #has_many :messages,
+    #    foreign_key: :##,
+    #    class_name: :Message,
 
-    has_many :messages,
-        foreign_key: :##,
-        class_name: :Message,
-<<<<<<< HEAD
-        primary_key: :id 
-=======
-        primary_key: :id  
->>>>>>> tmp
-    
-      has_many :channels,
-        foreign_key: :##,
-        class_name: :Channel,
-        primary_key: :id 
+    #    primary_key: :id 
 
+    #    primary_key: :id  
+
+    #
+    #  has_many :channels,
+    #    foreign_key: :##,
+    #    class_name: :Channel,
+    #    primary_key: :id 
+#
     def self.generate_session_token
         SecureRandom::urlsafe_base64(16)
     end

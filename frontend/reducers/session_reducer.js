@@ -1,7 +1,4 @@
-import {
-    LOGOUT_CURRENT_USER,
-    RECEIVE_CURRENT_USER,
-} from '../actions/session_actions';
+import {LOGOUT_CURRENT_USER,RECEIVE_CURRENT_USER,} from "../actions/session_action";
 
 const nullState = Object.freeze({
     id: null
