@@ -1,19 +1,13 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import SessionForm from 'session_form';
+import { logout } from './actions/session_actions';
+import Login from './login';
 
-const mstp = ({ errors }) => {
+const mstp = ({ session, entities: { users } }) => ({
+    currentUser: users[session.id]
+});
 
-    return {
-        errors: errors,
-        formType: "Login",
-    };
-};
+const mdtp = dispatch => ({
+    logout: () => dispatch(logout())
+});
 
-const mdtp = dispatch => {
-    return {
-        processForm: user => dispatch(login(user)),
-    };
-};
-
-export default connect(mstp, mdtp)(SessionForm);
+export default connect(mstp, mdtp)(Login);
