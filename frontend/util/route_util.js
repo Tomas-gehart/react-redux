@@ -1,22 +1,29 @@
-const Auth = ({ component: Component, path, loggedIn, exact }) => (
+import React from 'react';
+import { connect } from 'react-redux';
+import { Route, Redirect, withRouter } from 'react-router-dom';
+
+const mSTP = (state) => ({
+    loggedIn: Boolean(state.session.currentUser),
+});
+
+const Auth = ({ loggedIn, path, component: Component }) => (
     <Route
         path={path}
-        exact={exact}
         render={props =>
-            !loggedIn ? <Component {...props} /> : <Redirect to="/" />
+            loggedIn ? <Redirect to="/" /> : <Component {...props} />
         }
     />
 );
 
-const mapStateToProps = state => {
-    return { loggedIn: Boolean(state.session.id) };
-};
-
-export const AuthRoute = withRouter(
-    connect(
-        mapStateToProps,
-        null
-    )(Auth)
+const Protected = ({ loggedIn, path, component: Component }) => (
+    <Route
+        path={path}
+        render={(props) => (
+            loggedIn ? <Component {...props} /> : <Redirect to="/signup" />
+        )}
+    />
 );
 
+export const AuthRoute = withRouter(connect(mSTP)(Auth));
+export const ProtectedRoute = withRouter(connect(mSTP)(Protected));
 //benchBNBprompt

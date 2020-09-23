@@ -1,8 +1,10 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import { AuthRoute } from '../util/route_util'; 
+import Launch from "./launch_container";
+
 
 const App = () => (
     <div>
@@ -10,6 +12,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path='/login' component={LoginFormContainer} />
             <AuthRoute exact path='/signup' component={SignupFormContainer} />
+            <Route exact path='/' component={Launch} />
         </Switch>
     </div>
 );

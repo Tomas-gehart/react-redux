@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import { logout } from './actions/session_actions';
-import Launch from 'launch';
+import { logout } from '../actions/session_action';
+import Launch from './launch';
+
 
 const mstp = ({ session, entities: { users } }) => 
     {return {currentUser: users[session.id]};
