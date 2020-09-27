@@ -1,4 +1,4 @@
-class API::UsersController < ApplicationController
+class Api::UsersController < ApplicationController
 
     def index 
         @users = User.all
@@ -6,12 +6,15 @@ class API::UsersController < ApplicationController
     end
 
     def create 
+
         @user = User.new(user_params)
+
         if @user.save
-            login_user(@user)
+ 
+            login(@user)
             render :show
         else 
-            flash[:errors] = @user.errors.full_messages, status: 400
+            render @user.errors.full_messages, status: 400
         end
 
     end
@@ -22,6 +25,6 @@ class API::UsersController < ApplicationController
     private
     
     def user_params
-        params.require(:user).permit(:email, :password)
+        params.require(:user).permit(:email, :password, :username)
     end
 end

@@ -9,12 +9,13 @@ export const receiveCurrentUsers = user => ({
     user
 });
 
-export const receiveCurrentUser = () => ({
+export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 });
 
-export const receiveErrors = () => ({
+export const receiveErrors = (errors) => ({
     type: RECEIVE_SESSION_ERRORS,
+    errors 
 });
 
 export const signup = user => dispatch => (
@@ -26,16 +27,18 @@ export const signup = user => dispatch => (
 
 export const login = user => dispatch => (
     APIUTIL.login(user).then(
-        user => (dispatch(receiveCurrentUser(user)),
+        user => (dispatch(receiveCurrentUsers(user)),
         errors => dispatch(receiveErrors(errors.responseJSON))
     ))
 );
 
-export const logout = user => dispatch => (
-    APIUTIL.logout(user).then(
-        user => (dispatch(receiveCurrentUser(user))
+export const logout = () => dispatch => (
+    APIUTIL.logout().then(
+        () => (dispatch(logoutCurrentUser())
     ))
 );
+
+
 
 
 // why doesnt logout need errors?

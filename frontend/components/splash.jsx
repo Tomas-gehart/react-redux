@@ -1,9 +1,10 @@
 import React from 'react'; 
-import SplashHeader from "./splash_header";
+import SplashHeaderContainer from "./splash_launch_container";
+
 
 const Splash = () => (
     <div>
-        <SplashHeader/> 
+        <SplashHeaderContainer/> 
     </div>
 );
 

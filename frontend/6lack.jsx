@@ -7,9 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     window.configureStore = configureStore;
     const root = document.getElementById("root");
     let preloadedState = undefined;
+    
     if (window.currentUser) {
         preloadedState = {
+            entities: { users: { [window.currentUser.id]: window.currentUser } },
             session: { id: window.currentUser.id }
+
         };
     }
     const store = configureStore(preloadedState);

@@ -1,21 +1,114 @@
-.splash-top-header{
-    background-color: plum;
-    display: flex;
-    align-items: center;
-    font-size: 50px;
-    font-family: sans-serif;
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  
+.splash-div {
+    background: #f6efe8;
+    grid-template-rows: 100px 69px minmax(auto,125px) auto 286px 30px;
+    display: grid;
+    padding-top: 58px;
+    max-width: 1080px;
+    margin: 0 auto;
+    
 }
 
-.header-div {
-    background-color: plum;
-    width: 100%;
-
+.splash-hq{
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.8px;
+    font-size: 62px;
+    margin-left: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-column: 2/span 4;
+    grid-row: 1/span 2;
+    position: relative;
+    color: black;
+    z-index: 100000;
 }
 
-.top-div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
 
+.team {
+    display: inline-block;
+    grid-column: 5/span 4;
+    grid-row: 3;
+    block-size: inherit;
+    line-height: 1.44444444;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.splash-form {
+    grid-column: 5/span 2;
+    grid-row: 4;
+    align-self: end;
+    margin-bottom: 2rem;
+}
+
+.splash-email {
+    margin-right: 1rem;    
+    border: 1px solid #696969;
+    border-radius: 4px;
+    font-size: 16px; 
+    padding: 1.15rem 1rem;
+}
+
+.splash-email:focus {
+    outline: 0;
+    border: #611f69 solid 1px;
+}
+.splash-started {
+    padding: 19px 40px 20px;
+    font-weight: 425;
+    line-height: 1.28571429;
+    border-radius: 4px;
+    font-size: .875rem;
+    background-color: #4a154b;
+    color:beige;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 1px;
+    outline: 0;
+}
+
+.splash-started:hover {
+    background-color: #3d1242;
+    cursor: pointer;
+}
+
+.splash-login {
+    font-size: 90%;
+}
+
+.splash-link {
+    color: #1264a3;
+    text-decoration: none;
+    border-bottom: 1px solid #1264a3;
+}
+
+.navbar-right {
+    padding: 5px 30px 5px;
+    font-weight: 300;
+    line-height: 1;
+    border-radius: 4px;
+    font-size: .875rem;
+    color:beige;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 1px;
+    outline: 0;
+    background-color: #4a154b;
+}
+
+.navbar-link{
+    background: white;
+}
+
+.splash-picture {
+    width: 150px;
+    text-transform: lowercase;
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: initial;
+    box-sizing: inherit;
+    
 }
