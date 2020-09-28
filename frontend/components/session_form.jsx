@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
             <div className="background">
                 <div className="form-container">
                     <h2 className="session-form-header"></h2>
-                    <img src="https://gm1.ggpht.com/cIrYQLo5XTnaOOpoRuNCR_y84vAH3YJelKKeqKa4n4mJowglA6v2QmCvVbUuFXRgwBAJhcwZ5Of6ieVN_-cUVDZmAwOVJz9t0diYDxzNBU-bID0VtOidMPW012bGDW5E9i5rHNNM5UuEHhrFm4bzmg9FqFhBACPZs5uMxeQhAx6gfOpbyeXzwqKcktPevQT6k-yAnEeESSbECdBNawY25-QhJgpt8FR8b7m7KhIWsxbKzJv1B5awgqaOgbnHn9yMl8B9xNCRPv6ZXDVXoL873BC67Czh3SbqDs5WbhVTZiHE-4S2_EgR_WCiZYsP__lHJWLV1qv9BG7kGGcik7l2y6tVlbrc3IMVTqv45YSoG7M2jOvRVYKA-JGZ9IjBmDurVsWeiOpljheKeNYRJGXrks46w3G-Hb0HAOXp90vhIeDGdz9R_UJTfxHaw3Hq3h7XmvZsa7hrwqwGe72bs0y2x6iXurunrwpykYxw-Y7lRWFkBbNNez9XYA_dNUfPFrZtZwRiQFKS86jZiw7AJQwd25xRJNCVmSrKEtW0LHEHTu9Rho3ryeXf_U5G2dB3c1aR_u4PuQBUeeX--Hn5PKVmzLT3KD8jD1YuRCcyqcC7a8P0Xbnhr8yl7PiLQYD3SGf0wPkiwszsRUV3IyEdkqAI-jDN-hYHHpT1scibuODCax_sqhYdiF2Ot15JlkcF20RkE3EdvpbhTvCeE0A-xGffhigDG-ROU2uMoaW1fRjWdksv2VrDtDAj54UIrrJEbX8A3A=s0-l75-ft-l75-ft" className="splash-picture" />
+                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=2250439bd6&attid=0.1.1&permmsgid=msg-f:1679099208136606078&th=174d5bd5639f417e&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ8eM9XY0yoRVkhKOHwL6HGM9wzdK2FuwpQmcpucnKnIeiWHF-DmtzAbwHozBPFgOonWndozXBPM6LAneTPagkBd4OLiorscCz0iQZ-Vziv5adRC7zAPOvuFp8U&disp=emb" className="splash-picture" />
                     <br/>
                     <br/>
                     <div className="inner-form-container">
