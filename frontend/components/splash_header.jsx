@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import Vide from './video';
+
 
 
 class SplashPage extends React.Component {
@@ -24,35 +26,53 @@ class SplashPage extends React.Component {
         return (
             <div className="splash-div">
                 <div> 
+                    <video
+                        autoPlay
+                        loop
+                        src="https://a.slack-edge.com/9b527/marketing/img/homepage/hp-prospect/hero/desktop/mp4/hero-image.mp4"
+                        type="video/mp4"
+                        id="animation1"
+                        muted
+                    />
                 <h1 className="splash-hq">
-                    6lack is where work happens
+                    6lack is where collaborations happens
                 </h1>
                 <div className="team">
-                    With channels in 6lack, you and your team know where to go to ask questions, share updates and stay in the loop.
+                    With channels in 6lack, you and your team know where to go to ask questions, share updates and stay in the loop on your music.
                 </div>
+                <br/>
                 <form className="splash-form" onSubmit={this.handleSubmit}>
                     <input type="submit" className="splash-started" value="TRY FOR FREE" />
+
                 </form>
+                
                 </div>
-                <img src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/slack-integrations.png" className="splash-picture2" />
                 <div className="header-div-2">
-                    <h2 className="better-way">A better way to communicate</h2>
+                    <h2 className="better-way">A better way to share your art</h2>
                 <p className="unlike-text">
-                        Unlike email, conversations in Slack are easy to follow. And they’re more than conversations — you can make calls, share files, and even connect with other apps.
+                        Unlike email, conversations in 6lack are easy to follow. And they’re more than conversations — you can make calls, share music files, and even connect with other musicians on apps.
               </p>
                     <form className="splash-form" onSubmit={this.handleSubmit}>
                         <input type="submit" className="splash-started2" value="SEE ALL FEATURES" />
                     </form>
+                    <video className="animation-1"
+                        autoPlay
+                        loop
+                        src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/channels/bring-your-team-together-in-channels.mp4"
+                        type="video/mp4"
+                        id="animation2"
+                        muted
+                    />
                 </div>
                 <div className="header-div-3">
-                    <h2 className="better-way-2">Over 750,000 companies use Slack to get work done</h2>
+                    <h2 className="better-way-2">Over 750,000 companies use 6lack to get work done</h2>
                     <p className="unlike-text-2">
-                        “I help to bring product from the wild to the kitchen, and all across the dining room,” Koseba explains. “[With Slack] there’s no wasted time or wasted product because you’re able to communicate things right away.”
-                        Katina Connaughton
-                        Head Farmer, SingleThread
+                        “I help share my sound from the studio to others, and all around the world” Koseba explains. “[With 6lack] there’s no wasted time or wasted music because you’re able to communicate things right away.”
+                        Ricardo Valdez Valentine
+                        Artist, East Atlanta
                     </p>
+                    <img src="http://www.eastatlantaloveletter.com/sites/g/files/aaj2156/f/styles/suzuki_breakpoints_image_tablet/public/news/201809/1e68b060-dcfe-483d-b9d8-d03c76025c27.jpg?itok=7_VscGzn" className="splash-picture3" />
                 </div>
-                <img src="https://a.slack-edge.com/ce67d/marketing/img/stories/singlethread/customer-story.png" className="splash-picture3"/>
                 
                 
             </div>

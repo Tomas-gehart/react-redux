@@ -1,6 +1,5 @@
 import React from 'react';
 import FiberManualRecordOutlinedIcon from '@material-ui/icons/FiberManualRecordOutlined';
-import EmojiEmotionsOutlinedIcon from '@material-ui/icons/EmojiEmotionsOutlined';
 import SidebarName from './sidebar_name';
 import AddIcon from '@material-ui/icons/Add';
 import MessageOutlinedIcon from '@material-ui/icons/MessageOutlined';

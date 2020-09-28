@@ -1,7 +1,17 @@
 class Channel < ApplicationRecord
+    validates :name, :description, :admin_id, presence: true 
     validates :name, uniqueness: true
 
-    has_many :users
+    belongs_to :admin,
+        primary_key: id,
+        foreign_key: admin_id,
+        class_name: :User,
 
-
-end
+    has_many :users,
+        through: :memberships,
+        source: :user 
+    
+    has_many :messages
+        foreign_key: admin_id,
+        class_name: :Message,
+    end
