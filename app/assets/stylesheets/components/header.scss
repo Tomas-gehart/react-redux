@@ -1,0 +1,25 @@
+.channel-header{
+    background-color: #4a154b; 
+}
+
+.left {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: #4a154b;
+    color:white
+
+}
+
+.left_avatar{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+}
+
+.left > .MuiSvgIcon-root {
+    margin-left: auto;
+    margin-right: 30px;
+}

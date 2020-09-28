@@ -14,7 +14,7 @@ const NavBar = props => {
             <li><Link to="/" className="navbar-link">Pricing</Link></li>
             <li><Link to="/login" className="navbar-link">Log In</Link></li>
             <li><Link to="/login" className="navbar-link">Contact Sales</Link></li>
-            <li><Link to="/signup" className="navbar-right">TRY FOR FREE</Link></li>
+            <li><Link to="/signup" className="navbar-right">LAUNCH SLACK</Link></li>
 
          </ul>
     </>;

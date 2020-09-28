@@ -5,19 +5,41 @@
 .splash-div {
     background: #f6efe8;
     grid-template-rows: 100px 69px minmax(auto,125px) auto 286px 30px;
-    display: grid;
+    display: flex;
+    flex-direction: row;
     padding-top: 58px;
     max-width: 1080px;
     margin: 0 auto;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    
     
 }
+.splash-div > div {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: 30px;
+
+}
+
 
 .splash-hq{
+    background: #f6efe8;
+    grid-template-rows: 100px 69px minmax(auto,125px) auto 286px 30px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 58px;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: -.8px;
     font-size: 62px;
-    margin-left: 5rem;
+ 
     margin-top: 0;
     margin-bottom: 0;
     grid-column: 2/span 4;
@@ -28,6 +50,7 @@
 }
 
 
+
 .team {
     display: inline-block;
     grid-column: 5/span 4;
@@ -35,6 +58,7 @@
     block-size: inherit;
     line-height: 1.44444444;
     font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    height: fit-content;
 }
 
 .splash-form {
@@ -44,18 +68,6 @@
     margin-bottom: 2rem;
 }
 
-.splash-email {
-    margin-right: 1rem;    
-    border: 1px solid #696969;
-    border-radius: 4px;
-    font-size: 16px; 
-    padding: 1.15rem 1rem;
-}
-
-.splash-email:focus {
-    outline: 0;
-    border: #611f69 solid 1px;
-}
 .splash-started {
     padding: 19px 40px 20px;
     font-weight: 425;
@@ -79,11 +91,6 @@
     font-size: 90%;
 }
 
-.splash-link {
-    color: #1264a3;
-    text-decoration: none;
-    border-bottom: 1px solid #1264a3;
-}
 
 .navbar-right {
     padding: 5px 30px 5px;
@@ -110,5 +117,102 @@
     line-height: 1.46668;
     font-weight: initial;
     box-sizing: inherit;
+    max-width: 100%;
+    height: auto;
     
 }
+
+.footer{
+padding: 20px;
+  text-align: center;
+  background: #f6efe8;
+  margin-top: 20px;
+}
+
+.splash-div > .splash-bring {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-left: 30px;
+
+}
+
+.header-div-2{
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.8px;
+    font-size: 62px;
+ 
+    margin-top: 0;
+    margin-bottom: 0;
+    grid-column: 2/span 4;
+    grid-row: 1/span 2;
+    position: bottom-right;
+      bottom: 10px;
+    width: 50%;
+    border: 3px solid #8AC007;
+
+    color: black;
+    z-index: 10000;
+}
+
+.better-way{
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -.8px;
+    padding-bottom: 18px;
+}
+
+.unlike-text{
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: -.2px;
+    font-size: 1rem;
+    padding-bottom: 30px;
+}
+
+
+
+.splash-started2{
+    padding: 19px 40px 20px;
+    font-weight: 425;
+    line-height: 1.28571429;
+    border-radius: 4px;
+    font-size: .875rem;
+    background-color: #f6efe8;
+    color:#4a154b;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 1px;
+    outline: 0;
+}
+
+.header-div-3{
+    text-align: center;
+    min-height: 550px;
+    padding-top: 100px;
+    background-color: white;
+}
+
+.better-way-2{
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -.8px;
+    padding-bottom: 18px;
+}
+
+.unlike-text-2{
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: -.2px;
+    font-size: 1rem;
+    padding-bottom: 30px;
+}
+
+
+
+

@@ -59,10 +59,12 @@ class SessionForm extends React.Component {
                                     <input type="submit" value={this.props.formType} />
                                 </div>
                             </form>
-                            <div className="login-continue"></div>
-                            <p className="session-form-continue">Continue</p>
                         </div>
                     </div>
+                    <div className="login-continue"></div>
+                    <p className="session-form-continue">Continue</p>
+                    <p className="first-line">Don’t know your workspace URL? Find your workspaces</p>
+                    <p className="second-line">Looking to create a workspace instead? Create a new workspace</p>
                 </div>
             </div>
         );

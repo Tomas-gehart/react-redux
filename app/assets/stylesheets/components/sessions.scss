@@ -14,6 +14,7 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 2rem 0.5rem 1rem;
+    
 }
 
 
@@ -133,6 +134,21 @@
 .session-nav{
     background: white;
 }
+
+.first-line{
+    font-size: 13px;
+    line-height: 1.38463;
+    font-weight: 400;
+    color: rgba(var(--sk_foreground_max,29,28,29),.7);
+}
+
+.second-line{
+    font-size: 13px;
+    line-height: 1.38463;
+    font-weight: 400;
+    color: rgba(var(--sk_foreground_max,29,28,29),.7);
+}
+
 
 
 
