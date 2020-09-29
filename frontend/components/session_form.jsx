@@ -59,24 +59,20 @@ class SessionForm extends React.Component {
                                             onChange={this.update('username')}
                                             className="login-form" />
                                      </label>
-                                    <input type="submit" value={this.props.formType} />
+                                     <label>
+                                        <input type="submit"
+                                            value={this.props.formType}
+                                            className="login-form" /> 
+
+                                     </label>
+
                                 </div>
                             </form>
                         </div>
                     </div>
                     <br />
                     <button class="continue-button" data-qa="submit_team_domain_button" type="submit">  Continue</button>
-                    <br/>
-                    <p class="p-signin_form__caption">Don’t know your workspace URL?  
-                        <a target="_self" class="b-link" data-qa="find_your_workspace" href="/" rel="noopener noreferrer">
-                            <strong> Find your workspaces</strong>
-                        </a>
-                    </p>
-                    <p class="p-signin_form">Looking to create a workspace instead? 
-                        <a target="_self" class="c-link" data-qa="create_workspace_link" href="/" rel="noopener noreferrer">
-                            <strong> Create a new workspace</strong>
-                        </a>
-                    </p>
+
                 </div>
             </div>
         );

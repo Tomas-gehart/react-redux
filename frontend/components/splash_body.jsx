@@ -20,4 +20,3 @@ const NavBar = props => {
     </>;
 }
 export default NavBar;
-4

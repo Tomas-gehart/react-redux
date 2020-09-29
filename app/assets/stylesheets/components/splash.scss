@@ -4,7 +4,6 @@
   
 .splash-div {
     background: #f6efe8;
-    grid-template-rows: 100px 69px minmax(auto,125px) auto 286px 30px;
     display: flex;
     flex-direction: column;
     padding-top: 58px;
@@ -28,23 +27,20 @@
 
 .splash-hq{
     background: #f6efe8;
-    grid-template-rows: 100px 69px minmax(auto,125px) auto 286px 30px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    max-width: 1080px;
+
+    display: block;
+    box-sizing: inherit;
     margin: 0 auto;
-    font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+    padding-top: 30px;
+    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
     font-weight: 700;
-    line-height: 1.12;
-    letter-spacing: -.8px;
-    font-size: 62px;
- 
-    margin-top: 0;
-    margin-bottom: 0;
-    position: absolute;
-    color: black;
-    z-index: 100000;
+    line-height: 1.0625;
+    letter-spacing: -1.5px;
+    font-size: 50px;
+    max-height: 70%;
+    display: block;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 
@@ -62,6 +58,9 @@
     letter-spacing: 1px;
     margin-top: 0;
     font-size: 1.125rem;
+
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .splash-form {
@@ -79,11 +78,13 @@
     border-radius: 4px;
     font-size: .875rem;
     background-color: #4a154b;
-    color:beige;
+    color:white;
     box-shadow: none;
     border: none;
     letter-spacing: 1px;
     outline: 0;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 .splash-started:hover {
@@ -102,7 +103,7 @@
     line-height: 1;
     border-radius: 4px;
     font-size: .875rem;
-    color:beige;
+    color:white;
     box-shadow: none;
     border: none;
     letter-spacing: 1px;
@@ -220,5 +221,32 @@ padding: 20px;
 }
 
 
+.firstcol {
+    width: 400;
+    background: transparent;
+}
 
+.video{
+        max-width: 50%;
+        max-height: 70%;
+        display: block;
+        margin-left: 500px;
+        margin-top: 0px;
+}
+.animation-1{
+            max-width: 50%;
+        max-height: 70%;
+        display: block;
+        margin-left: 200px;
+        margin-top: 0px;
 
+}
+
+.splash-picture3{
+        max-width: 50%;
+        max-height: 70%;
+        display: block;
+        margin-left: 100px;
+        margin-top: 0px;
+
+}

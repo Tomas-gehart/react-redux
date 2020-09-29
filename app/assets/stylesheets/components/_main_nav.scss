@@ -9,9 +9,11 @@
 
 .session-nav {
     list-style: none;
+    background-color: white;
     display: flex;
-    max-width: 1230px;
+    margin: 0px 40px;
     justify-content: space-between;
+    width: 100%;
     height: 70px;
     align-items: center;
     color: black;
@@ -20,7 +22,22 @@
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 200;
     font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+}
+
+.navbar-links {
+    display: flex;
+    // width: 400px;
+}
+
+.navbar-link {
+    display:flex;
+    width: 200px;
+    
+}
+.navbar-logo { 
+   right: 0px;
 }
 
 .session-nav :hover{
