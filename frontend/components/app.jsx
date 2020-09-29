@@ -7,6 +7,7 @@ import Splash from "./splash";
 import NavBar from './splash_body';
 import Channel from "./channels/channels";
 import Chat from "./channels/chat";
+import Footer from "./splash_footer";
 
 const App = () => (
     <div className="top-div">
@@ -14,6 +15,7 @@ const App = () => (
         <AuthRoute exact path='/signup' component={SignupFormContainer} />
         <Route exact path='/' component={Splash} />                
         <Route path="/" component={NavBar} />
+        <Route path="/" component={Footer} />
         <Route path="/channels" component={Channel} />
         <Route path="/chat" component={Chat} />
     

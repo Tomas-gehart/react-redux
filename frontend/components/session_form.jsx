@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
                     <div className="inner-form-container">
                         <p className="sign-in-work">Sign In Your Workspace</p>
                         <br/>
-                        <p className="session-form-desc">Enter your workspace’s 6lack URL.</p>
+                        <p className="session-form-desc">Enter your workspace’s 6lack credentials.</p>
                     <div className="session-container">
                             <form onSubmit={this.handleSubmit} className="login-form">
                     

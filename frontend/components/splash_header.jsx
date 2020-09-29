@@ -50,12 +50,14 @@ class SplashPage extends React.Component {
                     </div> 
 
                     
-                    </div>
+                </div>
                 <div className="header-div-2">
-                    <h2 className="better-way">A better way to share your art</h2>
-                <p className="unlike-text">
-                        Unlike email, conversations in 6lack are easy to follow. And they’re more than conversations — you can make calls, share music files, and even connect with other musicians on apps.
-              </p>
+                    <h2 className="better-way">
+                        A better way to share your art
+                    </h2>
+                        <p className="unlike-text">
+                            Unlike email, conversations in 6lack are easy to follow. And they’re more than conversations — you can make calls, share music files, and even connect with other musicians on apps.
+                        </p>
                     <div>
                         <video className="animation-1"
                             autoPlay
@@ -66,37 +68,30 @@ class SplashPage extends React.Component {
                             muted
                         />
                     </div>
-                    <form className="splash-form" onSubmit={this.handleSubmit}>
-                        <input type="submit" className="splash-started2" value="SEE ALL FEATURES" />
-                    </form>
+                        <form className="splash-form" onSubmit={this.handleSubmit}>
+                            <input type="submit" className="splash-started2" value="SEE ALL FEATURES" />
+                        </form>
                 </div>
   
 
                 <div className="header-div-3">
-                    <h2 className="better-way-2">Over 750,000 companies use 6lack to get work done</h2>
-                    <div>
-                        <img src="http://www.eastatlantaloveletter.com/sites/g/files/aaj2156/f/styles/suzuki_breakpoints_image_tablet/public/news/201809/1e68b060-dcfe-483d-b9d8-d03c76025c27.jpg?itok=7_VscGzn" className="splash-picture3" />
+                    <h2 className="better-way-2">
+                        Over 750,000 artists use 6lack to get collaborations done
+                    </h2>
+                    <div className= "youtube">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iSgUMPHQEWw"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <br/>
-                    <p className="unlike-text-2">
-                        “I help share my sound from the studio to others, and all around the world” Valentine explains. “[With 6lack] there’s no wasted time or wasted music because you’re able to communicate things right away.”
-                        Ricardo Valdez Valentine
-                        Artist, East Atlanta
-                    </p>
+                        <p className="unlike-text-2">
+                            “I help share my sound from the studio to others, and all around the world” Valentine explains. “[With 6lack] there’s no wasted time or wasted music because you’re able to communicate things right away.”
+                            Ricardo Valdez Valentine
+                            Artist, East Atlanta.
+                        </p>
                 </div>
 
                 
-                </div>
-
-
-
-                
-                
-    
-            
-
-            
-        );
+            </div>
+         );
     }
 }
 
