@@ -1,14 +1,15 @@
 import { connect } from 'react-redux';
-import { login } from '../actions/session_action';
+import { login, clearErrors } from '../actions/session_action';
 import SessionForm from './session_form';
 
-const mstp = ({ session, entities: { users } }) => {
+const mstp = ({ session, errors, entities: { users } }) => {
     return {
-    currentUser: users[session.id] }
+        currentUser: users[session.id], errors: errors }
 };
 
 const mdtp = dispatch => ({
-    processForm: user => dispatch(login(user))
+    processForm: user => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mstp, mdtp)(SessionForm);

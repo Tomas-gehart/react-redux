@@ -1,4 +1,5 @@
 import React from 'react';
+import ErrorList from './errors';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -24,6 +25,11 @@ class SessionForm extends React.Component {
             return this.props.history.push('/');
         });
     }
+
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+    
     render() {
         return (
             <div className="background">
@@ -37,7 +43,9 @@ class SessionForm extends React.Component {
                         <br/>
                         <p className="session-form-desc">Enter your workspace’s 6lack credentials.</p>
                     <div className="session-container">
+
                             <form onSubmit={this.handleSubmit} className="login-form">
+                                <ErrorList errors={this.props.errors} />
                     
                             {this.props.formType} 
                                 <div className="login-form">
@@ -45,21 +53,19 @@ class SessionForm extends React.Component {
                                     <input type="text"
                                             value={this.state.email}
                                             onChange={this.update('email')}
-                                            className="login-form"/>
+                                            className="login-form"
+                                            placeholder="sixlack@interscope.com"/>
+
                                     </label>
                                     <label>Password:
                                     <input type="password"
                                             value={this.state.password}
                                             onChange={this.update('password')}
-                                            className="login-form"/>
+                                            className="login-form"
+                                            placeholder="prettylittlefears"/>
                                     </label>
-                                    <label>Username:
-                                    <input type="text"
-                                            value={this.state.username}
-                                            onChange={this.update('username')}
-                                            className="login-form" />
-                                     </label>
-                                     <label>
+                                    
+                                     <label>Continue
                                         <input type="submit"
                                             value={this.props.formType}
                                             className="login-form" /> 

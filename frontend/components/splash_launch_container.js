@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { logout } from '../actions/session_action';
+import { login, logout } from '../actions/session_action';
 import SplashHeader from './splash_header';
 
 
@@ -13,7 +13,8 @@ const mstp = (state) => {
 };
 
 const mdtp = dispatch => ({
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    processForm: (user) => dispatch(login(user))
 });
 
 export default connect(mstp,mdtp)(SplashHeader);

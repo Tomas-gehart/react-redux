@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { createChannel } from '../../actions/channel_action';
@@ -14,7 +15,7 @@ class ChannelForm extends React.Component {
     };
 
     update(field) {
-        return e => this.setState({ 
+        return e => this.setState({
             [field]: e.target.value
         })
     };
@@ -26,8 +27,8 @@ class ChannelForm extends React.Component {
         });
     };
 
-    render(){
-        return(
+    render() {
+        return (
             <div className="channel--form-container">
                 <form className="channel-create"
                     onSubmit={this.handleSubmit}>
@@ -60,4 +61,3 @@ class ChannelForm extends React.Component {
 }
 
 export default ChannelForm;
-

@@ -1,13 +1,21 @@
-import React from "react";
-import {useParams} from "react-router-dom";
+
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 
-function Chat(){
-    const{ channelId } = useParams();
+function Chat() {
+    const { channelId } = useParams();
 
-    
-    return(
-        <div className= "chat">
+    useEffect(() => {
+        if(channelId){
+            
+        }
+
+    }, [channelId])
+
+
+    return (
+        <div className="chat">
             <h2> You are in the {channelId} room</h2>
             <div className="chat__header">
                 <div className="chat_left">
@@ -18,9 +26,9 @@ function Chat(){
                 </div>
                 <div className="chat_right">
                     <p>
-                        <InfoOutlinedIcon/>Details
+                        <InfoOutlinedIcon />Details
                     </p>
-                    
+
 
                 </div>
             </div>

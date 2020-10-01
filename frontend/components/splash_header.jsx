@@ -11,6 +11,7 @@ class SplashPage extends React.Component {
             submitted: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
 
@@ -21,11 +22,15 @@ class SplashPage extends React.Component {
         });
     }
     
-    handleClick() {
-        this.props.action({ username: 'ricardo', email: 'sixlack@interscope.com', password: 'prettylittlefears' });
+    handleClick() { debugger
+        this.props.processForm({ username: 'ricardo', email: 'sixlack@interscope.com', password: 'prettylittlefears' }).then(()=>{
+            return this.props.history.push('/channels');
+
+        });
     }
     
     render() {
+        console.log(this.props)
         return (
             <div className="ultra-div">
                 <div className="splash-div">
@@ -83,9 +88,10 @@ class SplashPage extends React.Component {
                                 <p className="unlike-text">
                                     Unlike email, conversations in 6lack are easy to follow. And they’re more than conversations — you can make calls, share music files, and even connect with other musicians on apps.
                                 </p>
-                                <form className="splash-form" onClick={() => this.handleClick()}>
+                                <form className="splash-form" src={"./channels"} onClick={() => this.handleClick()}>
                                     <input type="submit" className="splash-started" value="Demo" />
                                 </form>
+                    
 
 
 

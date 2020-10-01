@@ -1,4 +1,4 @@
-.sidebar_name{
+.sidebarOption{
     display: flex;
     align-items: center;
     font-size: 12px;
@@ -6,20 +6,20 @@
     cursor: pointer;
 }
 
-.sidebar_name:hover {
-    background-color: #340e36;
+.sidebarOption:hover {
+    background-color: #140514;
 }
 
-.sidebar_name_icon{
+.sidebar_Option_icon{
     padding: 10px;
     font-size: 15px;
 }
-.sidebarname_channels{
-    color: white;
+.sidebarOption_channels{
+    color: rgb(122, 63, 63);
     padding: 10px;
 }
 
-.sidebarname_hash{
+.sidebarOption_hash{
     padding: 10px;
     color: white;
 }

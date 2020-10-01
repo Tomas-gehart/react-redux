@@ -1,20 +1,17 @@
 class Api::ChannelsController < ApplicationController  
     
-    def show  
-        @channel = Channel.find(params[:id])
-        render 'api/channels/show'
-    end
+    def show 
+        @channel = Channel.includes(:user_channels).find_by(id: params[:id])
+    end 
 
     def index 
-        @channels = Channel.all
-        render :index 
-    end
-
-
+        @channels = Channel.all.includes(:user_channels)
+    end 
+    
     def create 
         @channel = Channel.new(channels_params)
         if @channel.save 
-            render :show 
+            render :show #do we need to save users?
         else
             render @channel.errors.full_messages, status: 400
         end

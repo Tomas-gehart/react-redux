@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Avatar } from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
@@ -13,13 +12,13 @@ function Header() {
                 <Avatar
                     className="left_avatar"
                     alt="rav"
-                    src="singh" 
+                    src="singh"
                 />
 
             </div>
             <div className="header_searchbox">
                 <SearchIcon />
-                <input placeholder="search" />
+            <input placeholder="search" />
 
             </div>
             <div className="right">
