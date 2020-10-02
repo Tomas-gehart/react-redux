@@ -22,7 +22,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.processForm(this.state).then(() => {
-            return this.props.history.push('/');
+            return this.props.history.push('/channels');
         });
     }
 
@@ -57,6 +57,7 @@ class SessionForm extends React.Component {
                                             value={this.state.email}
                                             onChange={this.update('email')}
                                             className="login-form-1"
+                                            placeholder="jcole@dreamville.com"
                                             />
 
                                     </label>
@@ -66,6 +67,7 @@ class SessionForm extends React.Component {
                                             value={this.state.password}
                                             onChange={this.update('password')}
                                             className="login-form-2"
+                                            placeholder="loveyourz"
                                            />
                                     </label>
                                     

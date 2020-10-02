@@ -7,7 +7,6 @@ import Chat from './chat';
 function Channel() {
     return (
         <div className="channel">
-            <h1>Hello</h1>
             <Channel_Header />
             <div className="channel_body">
                 <Sidebar />

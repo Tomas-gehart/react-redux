@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import Navbar from './splash_body';
-import Footer from './splash_footer';
+import SplashFooter from './splash_footer';
 
 
 class SplashPage extends React.Component {
@@ -143,6 +143,7 @@ class SplashPage extends React.Component {
                     </div>
 
                 </div>
+                <SplashFooter/>
 
 
             </div>

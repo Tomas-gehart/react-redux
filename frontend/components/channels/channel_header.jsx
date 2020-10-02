@@ -1,5 +1,4 @@
 import React from 'react';
-import { Avatar } from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import ContactSupportOutlinedIcon from '@material-ui/icons/ContactSupportOutlined';
 
@@ -9,16 +8,15 @@ function Header() {
     return (
         <div className="channel-header">
             <div className="left">
-                <Avatar
-                    className="left_avatar"
-                    alt="rav"
-                    src="singh"
-                />
-
+                <div classname="rav">
+                    <img src="https://ca.slack-edge.com/T03GU501J-U012L4FKPAA-5ad6782370b5-48"className="lol" />
+                    
+                </div>
+               
             </div>
             <div className="header_searchbox">
                 <SearchIcon />
-            <input placeholder="search" />
+            <input placeholder="browse channels" />
 
             </div>
             <div className="right">
