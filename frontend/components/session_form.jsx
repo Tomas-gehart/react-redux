@@ -31,7 +31,10 @@ class SessionForm extends React.Component {
     }
     
     render() {
+
+  
         return (
+            
             <div className="background">
                 <div className="form-container">
                     <h2 className="session-form-header"></h2>
@@ -39,7 +42,7 @@ class SessionForm extends React.Component {
                     <br/>
                     <br/>
                     <div className="inner-form-container">
-                        <p className="sign-in-work">Sign In Your Workspace</p>
+                        <p className="sign-in-work">Sign To Your Workspace</p>
                         <br/>
                         <p className="session-form-desc">Enter your workspace’s 6lack credentials.</p>
                     <div className="session-container">
@@ -54,7 +57,7 @@ class SessionForm extends React.Component {
                                             value={this.state.email}
                                             onChange={this.update('email')}
                                             className="login-form-1"
-                                            placeholder=" sixlack@interscope.com"/>
+                                            />
 
                                     </label>
 
@@ -63,13 +66,13 @@ class SessionForm extends React.Component {
                                             value={this.state.password}
                                             onChange={this.update('password')}
                                             className="login-form-2"
-                                            placeholder="   prettylittlefears"/>
+                                           />
                                     </label>
                                     
-                                     <label className="continue">
+                                     <label className="continue1">
                                         <input type="submit"
                                             value={this.props.formType}
-                                            className="continue-button" /> 
+                                            /> 
 
                                      </label>
 
