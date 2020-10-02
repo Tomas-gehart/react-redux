@@ -16,6 +16,5 @@ Impelmented Technologies:
 * Adobe Photoshop
 * Adobe Illustrator
 
-![alt text](https://github.com/rvsin8/6lack/master/app/assets/images/Screen Shot 2020-10-02 at 3.05.39 AM)
 
 
