@@ -3,22 +3,20 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+# 6-lack
 
-* Ruby version
+## 6lackis a clone based of off [Slack](https://slack.com/). It is essentially a chat room for *musicians*, designed for *artists* to share their ideas and music. 
 
-* System dependencies
+Impelmented Technologies:
+* HTML
+* CSS
+* JavaScript
+* Postgres
+* Ruby on Rails
+* Webpack
+* React
+* Redux
+* Adobe Photoshop
+* Adobe Illustrator
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![alt text][logo]
