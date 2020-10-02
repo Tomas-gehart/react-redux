@@ -1,11 +1,13 @@
 class Api::ChannelsController < ApplicationController  
     
     def show 
-        @channel = Channel.includes(:user_channels).find_by(id: params[:id])
+        @channel = Channel.includes(:users).find_by(id: params[:id])
     end 
 
     def index 
-        @channels = Channel.all.includes(:user_channels)
+        @channels = Channel.all.includes(:users)
+
+        byebug
     end 
     
     def create 

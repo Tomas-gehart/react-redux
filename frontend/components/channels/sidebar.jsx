@@ -10,7 +10,6 @@ import SaveAltOutlinedIcon from '@material-ui/icons/SaveAltOutlined';
 
 function Sidebar() {
 
-
     return (
         <div className="sidebar">
             <div className="sidebar_header">

@@ -27,7 +27,7 @@ class SessionForm extends React.Component {
     }
 
     componentWillUnmount() {
-        this.props.clearErrors()
+        this.props.clearErrors();
     }
     
     render() {
@@ -35,7 +35,7 @@ class SessionForm extends React.Component {
             <div className="background">
                 <div className="form-container">
                     <h2 className="session-form-header"></h2>
-                    <img src="https://mail.google.com/mail/u/0?ui=2&ik=2250439bd6&attid=0.1.1&permmsgid=msg-f:1679099208136606078&th=174d5bd5639f417e&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ8eM9XY0yoRVkhKOHwL6HGM9wzdK2FuwpQmcpucnKnIeiWHF-DmtzAbwHozBPFgOonWndozXBPM6LAneTPagkBd4OLiorscCz0iQZ-Vziv5adRC7zAPOvuFp8U&disp=emb" className="splash-picture" />
+                    <img src={window.logo} className="splash-picture-1" />
                     <br/>
                     <br/>
                     <div className="inner-form-container">
@@ -49,26 +49,27 @@ class SessionForm extends React.Component {
                     
                             {this.props.formType} 
                                 <div className="login-form">
-                                    <label>Email:
+                                    <label className="email">Email:
                                     <input type="text"
                                             value={this.state.email}
                                             onChange={this.update('email')}
-                                            className="login-form"
-                                            placeholder="sixlack@interscope.com"/>
+                                            className="login-form-1"
+                                            placeholder=" sixlack@interscope.com"/>
 
                                     </label>
-                                    <label>Password:
+
+                                    <label className="password">Password:
                                     <input type="password"
                                             value={this.state.password}
                                             onChange={this.update('password')}
-                                            className="login-form"
-                                            placeholder="prettylittlefears"/>
+                                            className="login-form-2"
+                                            placeholder="   prettylittlefears"/>
                                     </label>
                                     
-                                     <label>Continue
+                                     <label className="continue">
                                         <input type="submit"
                                             value={this.props.formType}
-                                            className="login-form" /> 
+                                            className="continue-button" /> 
 
                                      </label>
 
@@ -77,7 +78,7 @@ class SessionForm extends React.Component {
                         </div>
                     </div>
                     <br />
-                    <button class="continue-button" data-qa="submit_team_domain_button" type="submit">  Continue</button>
+
 
                 </div>
             </div>

@@ -13,9 +13,9 @@ const receiveChannel = channel => ({
     channel
 });
 
-const removeChannel = channel => ({
+const removeChannel = channelId => ({
     type: REMOVE_CHANNEL,
-    channelId: channel.id
+    channelId
 });
 
 export const fetchChannels = () => dispatch => (
