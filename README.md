@@ -15,5 +15,7 @@ Impelmented Technologies:
 * Redux
 * Adobe Photoshop
 * Adobe Illustrator
- ![alt text](https://github.com/rvsin8/markdown-here/raw/master/src/common/images/logo1.png "Logo Title Text 1")
+
+[LogIn](https://imgur.com/7gtAuQD)
+
 
