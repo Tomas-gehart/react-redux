@@ -45,7 +45,7 @@ constructor(props) {
     componentWillUnmount() {
         this.props.clearErrors();
     }
-    ```
+```
 
 ## Technologies 
 * SQL
