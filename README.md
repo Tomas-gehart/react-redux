@@ -1,20 +1,54 @@
-# README
+# Introduction - At a glance
+## 6lack is a channel-based messaging platform (6lack, a slack clone).
 
-# 6-lack
+## It is centered around channels created by you, friends or co-workers so the app can keep track of what is going on within your team throughout the day - sharing ideas and plans made easy !
 
-## 6lack is a clone based of off [Slack](https://slack.com/). It is essentially a chat room for *musicians*, designed for *artists* to share their ideas and music. 
+[Live Link](https://aa-6lack.herokuapp.com/#/)
 
-Impelmented Technologies:
-* HTML
-* CSS
-* JavaScript
-* Postgres
-* Ruby on Rails
-* Webpack
-* React
-* Redux
-* Adobe Photoshop
-* Adobe Illustrator
+## Features
+
+A user can join a channel.
 
 
+A user can create a channel and add members (friends).
 
+
+Messages are shared within real time.
+
+## Code Highlights
+Implemented Session Log In / Sign Up - 
+```
+constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: '',
+            username: '',
+        }
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+
+    update(field) {
+        return e => this.setState({
+            [field]: e.currentTarget.value
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.processForm(this.state).then(() => {
+            return this.props.history.push('/channels');
+        });
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+    ```
+
+## Technologies 
+* SQL
+* Rails
+* React / Redux
+* CSS / HTML
