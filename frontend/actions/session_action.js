@@ -34,7 +34,6 @@ export const login = user => dispatch => {
     return APIUTIL.login(user).then(
         user => { return dispatch(receiveCurrentUsers(user))},
         errors => { 
-            debugger 
             return dispatch(receiveErrors(errors.responseJSON))}
     )
 };

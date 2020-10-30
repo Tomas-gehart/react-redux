@@ -1,28 +1,34 @@
-export const fetchChannels = () => (
-    $.ajax({
-        method: "GET",
-        url: "api/channels"
-    })
-);
+export const fetchChannels = () => {
+  return $.ajax({
+    url: `/api/channels/`,
+  });
+};
 
-export const fetchChannel = id => (
-    $.ajax({
-        method: "GET",
-        url: `api/channels/${id}`
-    })
-);
+export const fetchChannel = (id) => {
+  return $.ajax({
+    url: `/api/channels/${id}`,
+  });
+};
 
-export const createChannel = channel => (
-    $.ajax({
-        method: "POST",
-        url: "api/channels",
-        data: { channel }
-    })
-);
+export const createChannel = (channel) => {
+  return $.ajax({
+    url: `/api/channels/`,
+    method: "POST",
+    data: { channel },
+  });
+};
 
-export const deleteChannel = id => (
-    $.ajax({
-        method: "DELETE",
-        url: `api/channels/${id}`
-    })
-);
+export const editChannel = (id) => {
+  return $.ajax({
+    url: `/api/channels/${channel.id}`,
+    method: "PATCH",
+    data: { channel },
+  });
+};
+
+export const removeChannel = (id) => {
+  return $.ajax({
+    url: `/api/channels/${id}`,
+    method: "DELETE",
+  });
+};

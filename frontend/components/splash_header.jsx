@@ -24,7 +24,7 @@ class SplashPage extends React.Component {
         });
     }
     
-    handleClick() { debugger
+    handleClick() { 
         this.props.processForm({ username: 'ricardo', email: 'sixlack@interscope.com', password: 'prettylittlefears' }).then(()=>{
             return this.props.history.push('/channels');
 
