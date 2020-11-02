@@ -4,7 +4,6 @@ import SplashHeader from './splash_header';
 
 
 const mstp = (state) => {
-    console.log(state)
     if (state.session.id){
         return {currentUser: state.entities.users[state.session.id]} 
     } else {

@@ -8,7 +8,6 @@ class Dropdown extends React.Component {
     return (
       <div className="dropdown">
         <div className="dropdown-header">
-
           <h3 className="dropdown-username">
             {this.props.currentUser.username}
           </h3>
@@ -23,15 +22,15 @@ class Dropdown extends React.Component {
           <hr />
           <div className="dropdown-header2">
             <span>
-              <h3 className="dropdown-username">App Academy</h3>
-              <p>app-academy.6lack.com</p>
+              <h3 className="dropdown-username">Roc-a-Fella</h3>
+              <p>roc-a-fella.6lack.com</p>
             </span>
           </div>
 
           <hr />
           <li className="pro-drop">Customize 6lack</li>
           <li className="dropdown-signout" onClick={this.props.logout}>
-            Sign out of <b>App Academy</b>
+            Sign out of <b>Roc-a-Fella</b>
           </li>
           <hr />
           <li className="pro-drop">Sign in to another workspace...</li>
