@@ -3,17 +3,13 @@ import { closeModal } from "../../actions/modal_actions";
 import PrivateChannelForm from "./private_channel_form";
 import { fetchUsers } from "../../actions/user_action";
 import { fetchChannels, createChannel } from "../../actions/channel_action";
-import {  getAllUsernames, getJoinedUsers,  getAllPrivateChannelsOfCurrentUser,} from "../../reducers/selectors";
 import { createUserChannel } from "../../actions/userChannel_actions";
 
 const mstp = (state) => {
   return {
     errors: state.errors.session,
-    formType: "new private channel",
-    usernames: getAllUsernames(state),
-    privateChannels: getAllPrivateChannelsOfCurrentUser(state),
+    formType: "New Private Channel",
     currentUser: state.entities.users[state.session.id],
-    getJoinedUsers: (channelId) => getJoinedUsers(state, channelId),
   };
 };
 

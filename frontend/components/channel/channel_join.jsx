@@ -2,12 +2,12 @@ import { connect } from "react-redux";
 import { closeModal } from "../../actions/modal_action";
 import JoinChannelForm from "./channel_join_container";
 import { fetchChannels } from "../../actions/channel_action";
-import {createUserChannel,fetchUserChannels} from "../../actions/userChannel_actions";
+import {createUserChannel,fetchUserChannels} from "../../actions/userchannel_action";
 
 const mapStateToProps = (state) => {
   return {
     errors: state.errors.session,
-    formType: "join channel",
+    formType: "Join Channel",
     currentUser: state.entities.users[state.session.id],
   };
 };
