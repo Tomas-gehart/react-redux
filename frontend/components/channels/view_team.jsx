@@ -10,23 +10,23 @@ export default () => (
   <AppLayout>
     <Teams
       teams={[
-        { id: 1, letter: "B" },
-        { id: 2, letter: "Q" },
+        { id: 1, letter: "R" },
+        { id: 2, letter: "S" },
       ]}
     />
     <Channels
-      teamName="Team name"
+      teamName="Team Name"
       username="Username"
       channels={[
         { id: 1, name: "general" },
-        { id: 2, name: "random" },
+        { id: 2, name: "roc-a-fella-news" },
       ]}
       users={[
-        { id: 1, name: "slackbot" },
-        { id: 2, name: "ravneetsingh" },
+        { id: 1, name: "hovbot" },
+        { id: 2, name: "rav" },
       ]}
     />
-    <Header channelName="general" />
+    <Header channelName="general" />e
     <Messages>
       <ul className="message-list">
         <li />
