@@ -17,7 +17,7 @@ Messages are shared within real time.
 
 ## Code Highlights
 Implemented Session Log In / Sign Up - 
-```
+```Javascript
 constructor(props) {
         super(props);
         this.state = {
