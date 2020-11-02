@@ -4,7 +4,7 @@ import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import { AuthRoute } from '../util/route_util';
 import SplashHeaderContainer from "./splash_header_container";
-import Channel from "./channel/channel";
+import ViewTeam from "./channels/view_team";
 
 
 const App = () => (
@@ -12,7 +12,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={SplashHeaderContainer} />
-    <AuthRoute path="/channels/:channelId" component={Channel} />
+    <AuthRoute path="/view-team" component={ViewTeam} />
   </div>
 );
 
