@@ -4,7 +4,7 @@ import Teams from "../channels/teams";
 import Header from "../channels/header";
 import Messages from "../channels/messages";
 import SendMessage from "../channels/sendmessage";
-import AppLayout from "../channels/appLayout";
+
 
 export default () => (
   <AppLayout>
@@ -19,14 +19,14 @@ export default () => (
       username="Username"
       channels={[
         { id: 1, name: "general" },
-        { id: 2, name: "roc-a-fella-news" },
+        { id: 2, name: "random" },
       ]}
       users={[
-        { id: 1, name: "hovbot" },
-        { id: 2, name: "rav" },
+        { id: 1, name: "slackbot" },
+        { id: 2, name: "ravneetsingh" },
       ]}
     />
-    <Header channelName="general" />e
+    <Header channelName="general" />
     <Messages>
       <ul className="message-list">
         <li />
