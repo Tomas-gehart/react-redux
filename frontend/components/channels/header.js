@@ -11,4 +11,5 @@ export default ({ channelName }) => (
   <HeaderWrapper>
     <Header textAlign="center">#{channelName}</Header>
   </HeaderWrapper>
+
 );

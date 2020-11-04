@@ -3,7 +3,7 @@
   display: inline-block;
   width: 52px;
   height: 28px;
-  border: 1px solid slategray;
+  border: 1px solid white;
   border-radius: 60px;
 }
 
@@ -20,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: whitesmoke;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -32,17 +32,17 @@
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: darkslategray;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: skyblue;
+  background-color: #5f0360;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px skyblue;
+  box-shadow: 0 0 1px #5f0360;
 }
 
 input:checked + .slider:before {
@@ -51,6 +51,7 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* Rounded sliders */
 .slider.round {
   border-radius: 26px;
 }
@@ -59,112 +60,76 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.channel-create{
-    display: flex;
-    flex-direction: column;
-  height: 80%;
-  width: 80%;
-  background-color: #4a154b;
-  border: 1px solid black;
+.channel-form{
+  height: 522px;
+  width: 515px;
+  background-color: #a43aa6;
+  border: 1px solid #a43aa6;
   border-radius: 8px;
   box-sizing: border-box;
-  padding: 30px 25px 30px 27px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-left: 100px;
-  font-family:Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
+  padding: 30px 25px 30px 27px
 }
 
-.channel-create h1{
-color:white;
+.channel-form h1{
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 700;
   height: 54px;
-  font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
 }
 
-.create{
-  font-size: 28px;
-  font-weight: 00;
-  height: 54px;
-  font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-}
-
-.channel-create p{
+.channel-form p{
   color: white;
   line-height: 1.3rem;
   font-size: .9rem;
   height: 58px;
-  font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
 }
 
-.channel-create label{
+.channel-form label{
   font-weight: 700;
   font-size: .9rem;
   line-height: 2rem;
-  color: white;
 }
 
 .q{
-    padding-top: 20px;
-    padding-bottom: 20px;
   font-weight: 400;
   font-size: .75rem;
   color: white;
-    font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-
 }
 
-.channel-create label input::placeholder{
+.channel-form label input::placeholder{
   font-weight: 400;
   font-size: 1rem;
 }
 
 .channel-form label span{
   font-weight: 400;
-  color: gainsboro;
+  color: white;
 }
 
-.channel-create-name{
-        display: flex;
-    flex-direction: column;
+.channel-form-name{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
-  border: 1px solid gainsboro;
+  border: 1px solid white;
   border-radius: 3px;
   padding-left: 20px;
-  font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
 }
-.channel-des-name{
-    display: flex;
-    flex-direction: column;
+
+.channel-form textarea{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
-  border: 1px solid gainsboro;
-  border-radius: 3px;
-  padding-left: 20px;
-  font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
-
-}
-
-.channel-create textarea{
-  box-sizing: border-box;
-  width: 468px;
-  height: 47px;
-  border: 1px solid gainsboro;
+  border: 1px solid white;
   border-radius: 3px;
   padding: 5px 0px 0px 5px
 }
 
-.channel-create create{
+.channel-form form{
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.channel-create create > label{
+.channel-form form > label{
   height: 95px;
 }
 
@@ -179,22 +144,22 @@ color:white;
   font-weight: 400;
 }
 
-.channel-create-options{
+.channel-form-options{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: 60px;
 }
 
-.channel-create-options span{
-  color: darkgray;
+.channel-form-options span{
+  color: white;
   font-size: .9rem;
   line-height: 2rem;
 }
 
-.channel-create-options button{
-  background-color: whitesmoke;
-  border: 1px solid darkgray;
+.channel-form-options button{
+  background-color: white;
+  border: 1px solid white;
   line-height: 2rem;
   padding: 0px 12px;
   border-radius: 3px;
@@ -202,7 +167,7 @@ color:white;
   font-size: .9rem;
 }
 
-.channel-create-options button:hover{
+.channel-form-options button:hover{
   cursor: pointer;
   background-color: white;
   font-weight: 700;

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const TeamWrapper = styled.div`
   grid-column: 1;
   grid-row: 1 / 4;
-  background-color: #362234;
+  background-color: #350d36;
   color: #958993;
 `;
 
@@ -18,7 +18,7 @@ const TeamList = styled.ul`
 const TeamListItem = styled.li`
   height: 50px;
   width: 50px;
-  background-color: #676066;
+  background-color: #4a154b;
   color: #fff;
   margin: auto;
   margin-bottom: 10px;

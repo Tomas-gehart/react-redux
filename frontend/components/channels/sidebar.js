@@ -4,8 +4,8 @@ import gql from "graphql-tag";
 import findIndex from "lodash/findIndex";
 import decode from "jwt-decode";
 
-import Channels from "../components/Channels";
-import Teams from "../components/Teams";
+import Channels from "../channels/channels";
+import Teams from "../channels/teams";
 
 const Sidebar = ({ data: { loading, allTeams }, currentTeamId }) => {
   if (loading) {
@@ -20,7 +20,6 @@ const Sidebar = ({ data: { loading, allTeams }, currentTeamId }) => {
   try {
     const token = localStorage.getItem("token");
     const { user } = decode(token);
-    // eslint-disable-next-line prefer-destructuring
     username = user.username;
   } catch (err) {}
 

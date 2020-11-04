@@ -4,7 +4,7 @@ import Teams from "../channels/teams";
 import Header from "../channels/header";
 import Messages from "../channels/messages";
 import SendMessage from "../channels/sendmessage";
-
+import AppLayout from "../channels/applayout";
 
 export default () => (
   <AppLayout>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ChannelWrapper = styled.div`
   grid-column: 2;
   grid-row: 1 / 4;
-  background-color: #4e3a4c;
+  background-color: #350d36;
   color: #958993;
 `;
 
@@ -25,7 +25,7 @@ const SideBarListItem = styled.li`
   padding: 2px;
   ${paddingLeft};
   &:hover {
-    background: #3e313c;
+    background: #350d36;
   }
 `;
 
