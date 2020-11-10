@@ -1,7 +1,7 @@
 function Navbar(props) {
     return (
         <nav className="navbar">
-            <ul className="navbar-nav">{props.children}</ul>
+            <ul className="navbar-nav">{props.children}</ul> //*built in property --> children, will reference any UI elements i pass in 
         </nav>
     );
 }
