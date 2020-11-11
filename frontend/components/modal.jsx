@@ -1,8 +1,8 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
-import PublicChannelFormContainer from '../channel_form/public_channel_form_container';
-import PrivateChannelFormContainer from '../channel_form/private_channel_form_container';
+import PublicroomFormContainer from '../room_form/public_room_form_container';
+import PrivateroomFormContainer from '../room_form/private_room_form_container';
 
 
 
@@ -12,11 +12,11 @@ function Modal({ modal, closeModal }) {
     }
     let component;
     switch (modal) {
-        case 'new_public_channel':
-            component = <PublicChannelFormContainer />;
+        case 'new_public_room':
+            component = <PublicroomFormContainer />;
             break;
-        case 'new_private_channel':
-            component = <PrivateChannelFormContainer />;
+        case 'new_private_room':
+            component = <PrivateroomFormContainer />;
             break;
         default:
             return null;

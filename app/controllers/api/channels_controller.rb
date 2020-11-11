@@ -1,46 +1,46 @@
-class Api::ChannelsController < ApplicationController  
+class Api::roomsController < ApplicationController  
     
     def show 
-        @channel = Channel.includes(:users).find_by(id: params[:id])
+        @room = room.includes(:users).find_by(id: params[:id])
     end 
 
     def index 
-        @channels = Channel.all.includes(:users)
+        @rooms = room.all.includes(:users)
 
         byebug
     end 
     
     def create 
-        @channel = Channel.new(channels_params)
-        if @channel.save 
+        @room = room.new(rooms_params)
+        if @room.save 
             render :show #do we need to save users?
         else
-            render @channel.errors.full_messages, status: 400
+            render @room.errors.full_messages, status: 400
         end
     end
 
     def update 
-        @channel = Channel.find(params[:id])
-        if @channel.update(channels_params)
+        @room = room.find(params[:id])
+        if @room.update(rooms_params)
             render :show 
         else
-            render json: @channel.errors.full_messages, status: 422
+            render json: @room.errors.full_messages, status: 422
         end
     end
 
     def destroy 
-        @channel = Channel.find(params[:id])
-        if @channel.destroy 
+        @room = room.find(params[:id])
+        if @room.destroy 
             render :show 
         else
-             render json: @channel.errors.full_messages, status: 422
+             render json: @room.errors.full_messages, status: 422
         end
     end
 
 
     private 
 
-    def channels_params
-        params.require(:channel).permit(:name, :description, :admin_id, :private)
+    def rooms_params
+        params.require(:room).permit(:name, :description, :admin_id, :private)
     end
 end

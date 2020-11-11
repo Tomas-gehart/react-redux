@@ -1,4 +1,4 @@
 module ApplicationCable
-  class Channel < ActionCable::Channel::Base
+  class room < ActionCable::room::Base
   end
 end

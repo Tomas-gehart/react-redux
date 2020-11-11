@@ -60,7 +60,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.channel-form{
+.room-form{
   height: 522px;
   width: 515px;
   background-color: #a43aa6;
@@ -70,20 +70,20 @@ input:checked + .slider:before {
   padding: 30px 25px 30px 27px
 }
 
-.channel-form h1{
+.room-form h1{
   font-size: 28px;
   font-weight: 700;
   height: 54px;
 }
 
-.channel-form p{
+.room-form p{
   color: white;
   line-height: 1.3rem;
   font-size: .9rem;
   height: 58px;
 }
 
-.channel-form label{
+.room-form label{
   font-weight: 700;
   font-size: .9rem;
   line-height: 2rem;
@@ -95,17 +95,17 @@ input:checked + .slider:before {
   color: white;
 }
 
-.channel-form label input::placeholder{
+.room-form label input::placeholder{
   font-weight: 400;
   font-size: 1rem;
 }
 
-.channel-form label span{
+.room-form label span{
   font-weight: 400;
   color: white;
 }
 
-.channel-form-name{
+.room-form-name{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
@@ -114,7 +114,7 @@ input:checked + .slider:before {
   padding-left: 20px;
 }
 
-.channel-form textarea{
+.room-form textarea{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
@@ -123,13 +123,13 @@ input:checked + .slider:before {
   padding: 5px 0px 0px 5px
 }
 
-.channel-form form{
+.room-form form{
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.channel-form form > label{
+.room-form form > label{
   height: 95px;
 }
 
@@ -144,20 +144,20 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
-.channel-form-options{
+.room-form-options{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: 60px;
 }
 
-.channel-form-options span{
+.room-form-options span{
   color: white;
   font-size: .9rem;
   line-height: 2rem;
 }
 
-.channel-form-options button{
+.room-form-options button{
   background-color: white;
   border: 1px solid white;
   line-height: 2rem;
@@ -167,7 +167,7 @@ input:checked + .slider:before {
   font-size: .9rem;
 }
 
-.channel-form-options button:hover{
+.room-form-options button:hover{
   cursor: pointer;
   background-color: white;
   font-weight: 700;

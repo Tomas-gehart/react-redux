@@ -1,9 +1,9 @@
 import React from "react";
 
-class ChannelForm extends React.Component {
+class roomForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.channel;
+    this.state = this.props.room;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -12,7 +12,7 @@ class ChannelForm extends React.Component {
     this.props
       .processForm(this.state)
       .then((action) =>
-        this.props.history.push(`/channels/${action.channel.id}`)
+        this.props.history.push(`/rooms/${action.room.id}`)
       );
     this.props.closeModal();
   }
@@ -43,17 +43,17 @@ class ChannelForm extends React.Component {
       checked = "";
     }
     return (
-      <div className="channel-form">
-        <h1>Create a channel</h1>
+      <div className="room-form">
+        <h1>Create a room</h1>
         <p>
-          Channels are where your team communicates. They're best when organized
+          rooms are where your team communicates. They're best when organized
           around a topic - #collabs, for example.
         </p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name
             <input
-              className="channel-form-name"
+              className="room-form-name"
               type="text"
               value={this.state.name}
               onChange={this.handleChange("name")}
@@ -67,12 +67,12 @@ class ChannelForm extends React.Component {
               onChange={this.handleChange("details")}
             />
           </label>
-          <span className="q">What's this channel about?</span>
+          <span className="q">What's this room about?</span>
           <div className="private">
             <label>
               <b>Make private</b>
               <p>
-                When a channel is set to private, it can only be viewed or
+                When a room is set to private, it can only be viewed or
                 joined by invitation.
               </p>
             </label>
@@ -85,7 +85,7 @@ class ChannelForm extends React.Component {
               <span className="slider round"></span>
             </label>
           </div>
-          <div className="channel-form-options">
+          <div className="room-form-options">
             <span>ⓘ &nbsp; Learn More</span>
             <button>Create</button>
           </div>
@@ -95,4 +95,4 @@ class ChannelForm extends React.Component {
   }
 }
 
-export default ChannelForm;
+export default roomForm;

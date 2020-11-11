@@ -1,17 +1,17 @@
-import { RECEIVE_CHANNELS, RECEIVE_CHANNEL, REMOVE_CHANNEL} from "../actions/channel_action";
+import { RECEIVE_roomS, RECEIVE_room, REMOVE_room} from "../actions/room_action";
 
-const channelReducer = (prevState = {}, action) => {
+const roomReducer = (prevState = {}, action) => {
     Object.freeze(prevState);
     const nextState = Object.assign({}, prevState)
 
     switch (action.type) {
-        case RECEIVE_CHANNELS:
-            return Object.assign(action.channels, nextState);
-        case RECEIVE_CHANNEL:
-             nextState[action.channel.id] = action.channel;
+        case RECEIVE_roomS:
+            return Object.assign(action.rooms, nextState);
+        case RECEIVE_room:
+             nextState[action.room.id] = action.room;
              return nextState;
-        case REMOVE_CHANNEL:
-            delete nextState[action.channel.id];
+        case REMOVE_room:
+            delete nextState[action.room.id];
             return nextState;
 
         default:
@@ -19,4 +19,4 @@ const channelReducer = (prevState = {}, action) => {
     }
 }
 
-export default channelReducer;
+export default roomReducer;

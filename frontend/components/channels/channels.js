@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const ChannelWrapper = styled.div`
+const roomWrapper = styled.div`
   grid-column: 2;
   grid-row: 1 / 4;
   background-color: #350d36;
@@ -43,8 +43,8 @@ const Green = styled.span`
 
 const Bubble = ({ on = true }) => (on ? <Green>●</Green> : "○");
 
-const channel = ({ id, name }) => (
-  <SideBarListItem key={`channel-${id}`}># {name}</SideBarListItem>
+const room = ({ id, name }) => (
+  <SideBarListItem key={`room-${id}`}># {name}</SideBarListItem>
 );
 
 const user = ({ id, name }) => (
@@ -53,16 +53,16 @@ const user = ({ id, name }) => (
   </SideBarListItem>
 );
 
-export default ({ teamName, username, channels, users }) => (
-  <ChannelWrapper>
+export default ({ teamName, username, rooms, users }) => (
+  <roomWrapper>
     <PushLeft>
       <TeamNameHeader>{teamName}</TeamNameHeader>
       {username}
     </PushLeft>
     <div>
       <SideBarList>
-        <SideBarListHeader>Channels</SideBarListHeader>
-        {channels.map(channel)}
+        <SideBarListHeader>rooms</SideBarListHeader>
+        {rooms.map(room)}
       </SideBarList>
     </div>
     <div>
@@ -71,5 +71,5 @@ export default ({ teamName, username, channels, users }) => (
         {users.map(user)}
       </SideBarList>
     </div>
-  </ChannelWrapper>
+  </roomWrapper>
 );

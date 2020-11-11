@@ -26,7 +26,7 @@ class SplashPage extends React.Component {
     
     handleClick() { 
         this.props.processForm({ username: 'ricardo', email: 'sixlack@interscope.com', password: 'prettylittlefears' }).then(()=>{
-            return this.props.history.push('/channels');
+            return this.props.history.push('/rooms');
 
         });
     }
@@ -45,7 +45,7 @@ class SplashPage extends React.Component {
                             </h1>
 
                                     <div className="team">
-                                        With channels in 6lack, you and your team know where to go to ask questions, share updates and stay in the loop on your music.
+                                        With rooms in 6lack, you and your team know where to go to ask questions, share updates and stay in the loop on your music.
                             </div>
                                     <br />
                                     <form className="splash-form" onSubmit={this.handleSubmit}>
@@ -76,7 +76,7 @@ class SplashPage extends React.Component {
                                 <video className="animation-1"
                                     autoPlay
                                     loop
-                                    src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/channels/bring-your-team-together-in-channels.mp4"
+                                    src="https://a.slack-edge.com/5f6f2/marketing/img/homepage/hp-prospect/rooms/bring-your-team-together-in-rooms.mp4"
                                     type="video/mp4"
                                     id="animation2"
                                     muted
@@ -91,7 +91,7 @@ class SplashPage extends React.Component {
                                     <p className="unlike-text">
                                         Unlike email, conversations in 6lack are easy to follow. And they’re more than conversations — you can make calls, share music files, and even connect with other musicians on apps.
                                 </p>
-                                    <form className="splash-form" src={"./channels"} onClick={() => this.handleClick()}>
+                                    <form className="splash-form" src={"./rooms"} onClick={() => this.handleClick()}>
                                         <input type="submit" className="splash-started" value="Demo" />
                                     </form>
 

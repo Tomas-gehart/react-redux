@@ -1,10 +1,10 @@
 import React from "react";
-import Channels from "../channels/channels";
-import Teams from "../channels/teams";
-import Header from "../channels/header";
-import Messages from "../channels/messages";
-import SendMessage from "../channels/sendmessage";
-import AppLayout from "../channels/applayout";
+import rooms from "../rooms/rooms";
+import Teams from "../rooms/teams";
+import Header from "../rooms/header";
+import Messages from "../rooms/messages";
+import SendMessage from "../rooms/sendmessage";
+import AppLayout from "../rooms/applayout";
 
 export default () => (
   <AppLayout>
@@ -14,10 +14,10 @@ export default () => (
         { id: 2, letter: "S" },
       ]}
     />
-    <Channels
+    <rooms
       teamName="Team Name"
       username="Username"
-      channels={[
+      rooms={[
         { id: 1, name: "general" },
         { id: 2, name: "random" },
       ]}
@@ -26,13 +26,13 @@ export default () => (
         { id: 2, name: "ravneetsingh" },
       ]}
     />
-    <Header channelName="general" />
+    <Header roomName="general" />
     <Messages>
       <ul className="message-list">
         <li />
         <li />
       </ul>
     </Messages>
-    <SendMessage channelName="general" />
+    <SendMessage roomName="general" />
   </AppLayout>
 );

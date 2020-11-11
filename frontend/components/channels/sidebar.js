@@ -4,8 +4,8 @@ import gql from "graphql-tag";
 import findIndex from "lodash/findIndex";
 import decode from "jwt-decode";
 
-import Channels from "../channels/channels";
-import Teams from "../channels/teams";
+import rooms from "../rooms/rooms";
+import Teams from "../rooms/teams";
 
 const Sidebar = ({ data: { loading, allTeams }, currentTeamId }) => {
   if (loading) {
@@ -31,11 +31,11 @@ const Sidebar = ({ data: { loading, allTeams }, currentTeamId }) => {
         letter: t.name.charAt(0).toUpperCase(),
       }))}
     />,
-    <Channels
-      key="channels-sidebar"
+    <rooms
+      key="rooms-sidebar"
       teamName={team.name}
       username={username}
-      channels={team.channels}
+      rooms={team.rooms}
       users={[
         { id: 1, name: "slackbot" },
         { id: 2, name: "user1" },
@@ -49,7 +49,7 @@ const allTeamsQuery = gql`
     allTeams {
       id
       name
-      channels {
+      rooms {
         id
         name
       }

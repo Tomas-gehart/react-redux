@@ -1,4 +1,4 @@
-class UserChannel < ApplicationRecord
+class Userroom < ApplicationRecord
     #validations?
 
 
