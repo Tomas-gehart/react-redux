@@ -65,3 +65,14 @@
 .messages-container, .new-message-input-field, .send-message-button {
     border-color: #9a9a9a;
 }
+
+  
+body {
+  margin: 0;
+}
+
+body, input, button, a, textarea {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
