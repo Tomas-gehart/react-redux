@@ -1,10 +1,9 @@
 import React from "react";
-import rooms from "../rooms/rooms";
-import Teams from "../rooms/teams";
-import Header from "../rooms/header";
-import Messages from "../rooms/messages";
-import SendMessage from "../rooms/sendmessage";
-import AppLayout from "../rooms/applayout";
+import Teams from "../channels/teams";
+import Header from "../channels/header";
+import Messages from "../channels/messages";
+import SendMessage from "../channels/sendmessage";
+import AppLayout from "../channels/applayout";
 
 export default () => (
   <AppLayout>

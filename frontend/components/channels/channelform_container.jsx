@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createroom } from "../../actions/room_action";
+import { createroom } from "../../actions/room_actions";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modal_actions";
 
