@@ -5,15 +5,9 @@ import Header from "../channels/header";
 import Messages from "../channels/messages";
 import SendMessage from "../channels/sendmessage";
 import AppLayout from "../channels/applayout";
-import AddIcon from "@material-ui/icons/Add";
-import Navbar from "../channels/navbar";
-import NavItem from "../channels/navbar";
 
 export default () => (
   <AppLayout>
-    <Navbar>
-      <NavItem icon={<AddIcon />} ></NavItem>
-    </Navbar>
     <Teams
       teams={[
         { id: 1, letter: "R" },

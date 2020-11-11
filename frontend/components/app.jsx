@@ -6,6 +6,7 @@ import { AuthRoute } from '../util/route_util';
 import SplashHeaderContainer from "./splash_header_container";
 import ViewTeam from "./channels/view_team";
 import ChannelFormContainer from "./channels/channelform_container";
+import Nav from "./channels/navbar";
 
 
 
@@ -16,11 +17,8 @@ const App = () => (
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={SplashHeaderContainer} />
     <AuthRoute path="/view-team" component={ViewTeam} />
-    <Route
-      exact
-      path="/new"
-      component={ChannelFormContainer}
-    />
+    <Route path="/view-team-nav" component={Nav} />
+    <Route exact path="/new" component={ChannelFormContainer} />
   </div>
 );
 
