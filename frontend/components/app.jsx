@@ -7,6 +7,9 @@ import SplashHeaderContainer from "./splash_header_container";
 import ViewTeam from "./channels/view_team";
 import ChannelFormContainer from "./channels/channelform_container";
 import Nav from "./channels/navbar";
+import Home from "./channels/home";
+import ChatRoom from "./channels/chatroom";
+
 
 
 
@@ -19,6 +22,8 @@ const App = () => (
     <AuthRoute path="/view-team" component={ViewTeam} />
     <Route path="/view-team-nav" component={Nav} />
     <Route exact path="/new" component={ChannelFormContainer} />
+    <Route exact path="/channel" component={Home} />
+    <Route exact path="/:roomId" component={ChatRoom} />
   </div>
 );
 
