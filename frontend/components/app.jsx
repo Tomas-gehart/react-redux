@@ -23,7 +23,7 @@ const App = () => (
     <Route path="/view-team-nav" component={Nav} />
     <Route exact path="/new" component={ChannelFormContainer} />
     <Route exact path="/channel" component={Home} />
-    <Route exact path="/channel/:roomId" component={ChatRoom} />
+    <Route exact path="/:roomId" component={ChatRoom} />
   </div>
 );
 
