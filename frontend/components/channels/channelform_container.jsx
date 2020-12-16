@@ -1,22 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import { createroom } from "../../actions/room_actions";
+import { createchannels } from "../../actions/channel_action";
 import { withRouter } from "react-router-dom";
 import { closeModal } from "../../actions/modal_actions";
 
-import roomForm from "./roomForm";
+import channelsForm from "./channelform";
 
 const mSTP = (state) => {
   return {
-    room: { name: "", details: "", private: false },
+    channels: { name: "", details: "", private: false },
   };
 };
 
 const mDTP = (dispatch) => {
   return {
-    processForm: (room) => dispatch(createroom(room)),
+    processForm: (channels) => dispatch(createchannels(channels)),
     closeModal: () => dispatch(closeModal()),
   };
 };
 
-export default withRouter(connect(mSTP, mDTP)(roomForm));
+export default withRouter(connect(mSTP, mDTP)(channelsForm));

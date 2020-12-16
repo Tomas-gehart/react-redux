@@ -22,8 +22,8 @@ const App = () => (
     <AuthRoute path="/view-team" component={ViewTeam} />
     <Route path="/view-team-nav" component={Nav} />
     <Route exact path="/new" component={ChannelFormContainer} />
-    <Route exact path="/channel" component={Home} />
-    <Route exact path="/:roomId" component={ChatRoom} />
+    <Route exact path="/channels" component={Home} />
+    <Route exact path="/channels/:channelsId" component={ChatRoom} />
   </div>
 );
 

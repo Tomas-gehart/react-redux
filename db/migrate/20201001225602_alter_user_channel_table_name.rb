@@ -1,5 +1,5 @@
-class AlterUserroomTableName < ActiveRecord::Migration[5.2]
+class AlterUserchannelsTableName < ActiveRecord::Migration[5.2]
   def change
-    rename_table :table_user_rooms, :user_rooms
+    rename_table :table_user_channelss, :user_channelss
   end
 end

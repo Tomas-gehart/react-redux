@@ -13,10 +13,10 @@ export default () => (
         { id: 2, letter: "S" },
       ]}
     />
-    <rooms
+    <channelss
       teamName="Team Name"
       username="Username"
-      rooms={[
+      channelss={[
         { id: 1, name: "general" },
         { id: 2, name: "random" },
       ]}
@@ -25,13 +25,13 @@ export default () => (
         { id: 2, name: "ravneetsingh" },
       ]}
     />
-    <Header roomName="general" />
+    <Header channelsName="general" />
     <Messages>
       <ul className="message-list">
         <li />
         <li />
       </ul>
     </Messages>
-    <SendMessage roomName="general" />
+    <SendMessage channelsName="general" />
   </AppLayout>
 );

@@ -1,9 +1,9 @@
 // Action Cable provides the framework to deal with WebSockets in Rails.
-// You can generate new rooms where WebSocket features live using the `rails generate room` command.
+// You can generate new channelss where WebSocket features live using the `rails generate channels` command.
 //
 //= require action_cable
 //= require_self
-//= require_tree ./rooms
+//= require_tree ./channels
 
 (function() {
   this.App || (this.App = {});

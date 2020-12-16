@@ -9,7 +9,7 @@ class User < ApplicationRecord
     attr_reader :password
     before_validation :ensure_session_token
 
-    has_and_belongs_to_many :rooms
+    has_and_belongs_to_many :channelss
     
 
 

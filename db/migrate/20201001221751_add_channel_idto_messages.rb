@@ -1,6 +1,6 @@
-class AddroomIdtoMessages < ActiveRecord::Migration[5.2]
+class AddchannelsIdtoMessages < ActiveRecord::Migration[5.2]
   def change
-    add_reference(:messages, :room, type: :integer)
+    add_reference(:messages, :channels, type: :integer)
 
   end
 end

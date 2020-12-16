@@ -13,7 +13,7 @@ export const meQuery = gql`
           id
           username
         }
-        rooms {
+        channelss {
           id
           name
           dm

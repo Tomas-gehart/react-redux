@@ -2,14 +2,9 @@ import React from "react";
 
 import useChat from "./usechat";
 
-<<<<<<< HEAD
-
-const Chatroom = (props) => {
-=======
-const ChatRoom = (props) => {
->>>>>>> 72dba118522b75e7535dbe7f8eee108456e9ad84
-  const { roomId } = props.match.params;
-  const { messages, sendMessage } = useChat(roomId);
+const Chatchannels = (props) => {
+  const { channelsId } = props.match.params;
+  const { messages, sendMessage } = useChat(channelsId);
   const [newMessage, setNewMessage] = React.useState("");
 
   const handleNewMessageChange = (event) => {
@@ -22,12 +17,8 @@ const ChatRoom = (props) => {
   };
 
   return (
-    <div className="chat-room-container">
-<<<<<<< HEAD
-      <h1 className="room-name">room: {roomId}</h1>
-=======
-      <h1 className="room-name">Room: {roomId}</h1>
->>>>>>> 72dba118522b75e7535dbe7f8eee108456e9ad84
+    <div className="chat-channels-container">
+      <h1 className="channels-name">channels: {channelsId}</h1>
       <div className="messages-container">
         <ol className="messages-list">
           {messages.map((message, i) => (
@@ -55,8 +46,4 @@ const ChatRoom = (props) => {
   );
 };
 
-<<<<<<< HEAD
-export default Chatroom;
-=======
-export default ChatRoom;
->>>>>>> 72dba118522b75e7535dbe7f8eee108456e9ad84
+export default Chatchannels;

@@ -7,9 +7,9 @@ const HeaderWrapper = styled.div`
   grid-row: 1;
 `;
 
-export default ({ roomName }) => (
+export default ({ channelsName }) => (
   <HeaderWrapper>
-    <Header textAlign="center">#{roomName}</Header>
+    <Header textAlign="center">#{channelsName}</Header>
   </HeaderWrapper>
 
 );

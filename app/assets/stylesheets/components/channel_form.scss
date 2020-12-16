@@ -60,7 +60,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.room-form{
+.channels-form{
   height: 522px;
   width: 515px;
   background-color: #a43aa6;
@@ -70,20 +70,20 @@ input:checked + .slider:before {
   padding: 30px 25px 30px 27px
 }
 
-.room-form h1{
+.channels-form h1{
   font-size: 28px;
   font-weight: 700;
   height: 54px;
 }
 
-.room-form p{
+.channels-form p{
   color: white;
   line-height: 1.3rem;
   font-size: .9rem;
   height: 58px;
 }
 
-.room-form label{
+.channels-form label{
   font-weight: 700;
   font-size: .9rem;
   line-height: 2rem;
@@ -95,17 +95,17 @@ input:checked + .slider:before {
   color: white;
 }
 
-.room-form label input::placeholder{
+.channels-form label input::placeholder{
   font-weight: 400;
   font-size: 1rem;
 }
 
-.room-form label span{
+.channels-form label span{
   font-weight: 400;
   color: white;
 }
 
-.room-form-name{
+.channels-form-name{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
@@ -114,7 +114,7 @@ input:checked + .slider:before {
   padding-left: 20px;
 }
 
-.room-form textarea{
+.channels-form textarea{
   box-sizing: border-box;
   width: 468px;
   height: 47px;
@@ -123,13 +123,13 @@ input:checked + .slider:before {
   padding: 5px 0px 0px 5px
 }
 
-.room-form form{
+.channels-form form{
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.room-form form > label{
+.channels-form form > label{
   height: 95px;
 }
 
@@ -144,20 +144,20 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
-.room-form-options{
+.channels-form-options{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   height: 60px;
 }
 
-.room-form-options span{
+.channels-form-options span{
   color: white;
   font-size: .9rem;
   line-height: 2rem;
 }
 
-.room-form-options button{
+.channels-form-options button{
   background-color: white;
   border: 1px solid white;
   line-height: 2rem;
@@ -167,7 +167,7 @@ input:checked + .slider:before {
   font-size: .9rem;
 }
 
-.room-form-options button:hover{
+.channels-form-options button:hover{
   cursor: pointer;
   background-color: white;
   font-weight: 700;

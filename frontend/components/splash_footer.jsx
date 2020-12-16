@@ -15,12 +15,12 @@ class SplashFooter extends React.Component {
 
                 <div className="footer3">
                     <h3>Signed Artists</h3>
-                    <a className="artist-links" href="https://www.youtube.com/watch?v=l0U7SxXHkPY&ab_room=FutureVEVO"><p>Nayvadius Cash</p></a>
-                    <a className="artist-links" href="https://www.youtube.com/watch?v=yzTuBuRdAyA&ab_room=TheWeekndVEVO"><p>Abel Makkonen Tesfaye</p></a>
-                    <a className="personal-links" href="https://www.youtube.com/watch?v=XEJLuJyxLDE&ab_room=dojacatVEVO"><p>Amala Ratna Zandile Dlamini</p></a>
-                    <a className="personal-links" href="https://www.youtube.com/watch?v=KnZ8h3MRuYg&ab_room=TravisScottVEVO">Jacques Berman Webster II</a>
-                    <a className="personal-links" href="https://www.youtube.com/watch?v=DmWWqogr_r8&list=RDEMXkM2nJEjVBDVM0dz8BCQqA&index=2&ab_room=21SavageVEVO"><p>Shayaa Bin Abraham-Joseph</p></a>
-                    <a className="personal-links" href="https://www.youtube.com/watch?v=bnFa4Mq5PAM&ab_room=LILUZIVERT">Symere Woods</a>
+                    <a className="artist-links" href="https://www.youtube.com/watch?v=l0U7SxXHkPY&ab_channels=FutureVEVO"><p>Nayvadius Cash</p></a>
+                    <a className="artist-links" href="https://www.youtube.com/watch?v=yzTuBuRdAyA&ab_channels=TheWeekndVEVO"><p>Abel Makkonen Tesfaye</p></a>
+                    <a className="personal-links" href="https://www.youtube.com/watch?v=XEJLuJyxLDE&ab_channels=dojacatVEVO"><p>Amala Ratna Zandile Dlamini</p></a>
+                    <a className="personal-links" href="https://www.youtube.com/watch?v=KnZ8h3MRuYg&ab_channels=TravisScottVEVO">Jacques Berman Webster II</a>
+                    <a className="personal-links" href="https://www.youtube.com/watch?v=DmWWqogr_r8&list=RDEMXkM2nJEjVBDVM0dz8BCQqA&index=2&ab_channels=21SavageVEVO"><p>Shayaa Bin Abraham-Joseph</p></a>
+                    <a className="personal-links" href="https://www.youtube.com/watch?v=bnFa4Mq5PAM&ab_channels=LILUZIVERT">Symere Woods</a>
 
                 </div>
 

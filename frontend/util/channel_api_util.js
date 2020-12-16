@@ -1,34 +1,34 @@
-export const fetchrooms = () => {
+export const fetchchannels = () => {
   return $.ajax({
-    url: `/api/rooms/`,
+    url: `/api/channels/`,
   });
 };
 
-export const fetchroom = (id) => {
+export const fetchchannel = (id) => {
   return $.ajax({
-    url: `/api/rooms/${id}`,
+    url: `/api/channels/${id}`,
   });
 };
 
-export const createroom = (room) => {
+export const createchannel = (channels) => {
   return $.ajax({
-    url: `/api/rooms/`,
+    url: `/api/channels/`,
     method: "POST",
-    data: { room },
+    data: { channels },
   });
 };
 
-export const editroom = (id) => {
+export const editchannel = (id) => {
   return $.ajax({
-    url: `/api/rooms/${room.id}`,
+    url: `/api/channels/${channels.id}`,
     method: "PATCH",
-    data: { room },
+    data: { channels },
   });
 };
 
-export const removeroom = (id) => {
+export const removechannel = (id) => {
   return $.ajax({
-    url: `/api/rooms/${id}`,
+    url: `/api/channels/${id}`,
     method: "DELETE",
   });
 };

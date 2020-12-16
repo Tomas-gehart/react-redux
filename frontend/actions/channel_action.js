@@ -1,33 +1,33 @@
-export const RECEIVE_roomS = "RECEIVE_roomS";
-export const RECEIVE_room = "RECEIVE_room";
-import * as roomAPI from "../util/room_api_util";
+export const RECEIVE_CHANNEL = "RECEIVE_CHANNEL";
+export const RECEIVE_CHANNELS = "RECEIVE_CHANNELS";
+import * as channelsAPI from "../util/channel_api_util";
 
-export const receiverooms = (rooms) => {
+export const receivechannel = (channels) => {
   return {
-    type: RECEIVE_roomS,
-    rooms,
+    type: RECEIVE_CHANNEL,
+    channels,
   };
 };
 
-export const receiveroom = (payload) => ({
-  type: RECEIVE_room,
+export const receivechannels = (payload) => ({
+  type: RECEIVE_CHANNELS,
   payload,
 });
 
-export const fetchrooms = () => (dispatch) => {
-  return roomAPI
-    .fetchrooms()
-    .then((res) => dispatch(receiverooms(res)));
+export const fetchchannels = () => (dispatch) => {
+  return channelsAPI
+    .fetchchannels()
+    .then((res) => dispatch(receivechannels(res)));
 };
 
-export const fetchroom = (id) => (dispatch) => {
-  return roomAPI
-    .fetchroom(id)
-    .then((res) => dispatch(receiveroom(res)));
+export const fetchchannel = (id) => (dispatch) => {
+  return channelsAPI
+    .fetchchannel(id)
+    .then((res) => dispatch(receivechannels(res)));
 };
 
-export const createroom = (room) => (dispatch) => {
-  return roomAPI
-    .createroom(room)
-    .then((res) => dispatch(receiveroom(res)));
+export const createchannels = (channels) => (dispatch) => {
+  return channelsAPI
+    .createchannel(channels)
+    .then((res) => dispatch(receivechannels(res)));
 };

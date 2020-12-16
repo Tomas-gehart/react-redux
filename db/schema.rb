@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_10_01_231802) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "rooms", force: :cascade do |t|
+  create_table "channelss", force: :cascade do |t|
     t.string "name"
     t.integer "admin_id"
     t.boolean "is_private"
@@ -23,18 +23,18 @@ ActiveRecord::Schema.define(version: 2020_10_01_231802) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "rooms_users", id: false, force: :cascade do |t|
+  create_table "channelss_users", id: false, force: :cascade do |t|
     t.integer "user_id"
-    t.integer "room_id"
+    t.integer "channels_id"
   end
 
   create_table "messages", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "room_id"
+    t.integer "channels_id"
     t.text "body"
     t.integer "sender_id"
-    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["channels_id"], name: "index_messages_on_channels_id"
   end
 
   create_table "users", force: :cascade do |t|

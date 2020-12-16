@@ -1,25 +1,25 @@
-export const RECEIVE_USER_roomS = 'RECEIVE_USER_roomS';
-export const RECEIVE_USER_room = 'RECEIVE_USER_room';
-import * as userroomAPI from '../util/userroom_api_util';
+export const RECEIVE_USER_channelsS = 'RECEIVE_USER_channelsS';
+export const RECEIVE_USER_channels = 'RECEIVE_USER_channels';
+import * as userchannelsAPI from '../util/userchannels_api_util';
 
-export const receiveUserrooms = (user_rooms) => {
+export const receiveUserchannelss = (user_channelss) => {
     return {
-        type: RECEIVE_USER_roomS,
-        user_rooms
+        type: RECEIVE_USER_channelsS,
+        user_channelss
     };
 };
 
-export const receiveUserroom = (payload) => {
+export const receiveUserchannels = (payload) => {
     return {
-        type: RECEIVE_USER_room,
+        type: RECEIVE_USER_channels,
         payload
     };
 };
 
-export const fetchUserrooms = () => (dispatch) => {
-    return userroomAPI.fetchUserrooms().then(res => dispatch(receiveUserrooms(res)));
+export const fetchUserchannelss = () => (dispatch) => {
+    return userchannelsAPI.fetchUserchannelss().then(res => dispatch(receiveUserchannelss(res)));
 };
 
-export const createUserroom = (userroom) => (dispatch) => {
-    return userroomAPI.createUserroom(userroom).then(res => dispatch(receiveUserroom(res)));
+export const createUserchannels = (userchannels) => (dispatch) => {
+    return userchannelsAPI.createUserchannels(userchannels).then(res => dispatch(receiveUserchannels(res)));
 };

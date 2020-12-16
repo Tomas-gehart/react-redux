@@ -1,9 +1,9 @@
 import React from "react";
 
-class roomForm extends React.Component {
+class channelsForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.room;
+    this.state = this.props.channels;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -12,7 +12,7 @@ class roomForm extends React.Component {
     this.props
       .processForm(this.state)
       .then((action) =>
-        this.props.history.push(`/rooms/${action.room.id}`)
+        this.props.history.push(`/channelss/${action.channels.id}`)
       );
     this.props.closeModal();
   }
@@ -43,17 +43,17 @@ class roomForm extends React.Component {
       checked = "";
     }
     return (
-      <div className="room-form">
-        <h1>Create a room</h1>
+      <div className="channels-form">
+        <h1>Create a channels</h1>
         <p>
-          rooms are where your team communicates. They're best when organized
+          channelss are where your team communicates. They're best when organized
           around a topic - #collabs, for example.
         </p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name
             <input
-              className="room-form-name"
+              className="channels-form-name"
               type="text"
               value={this.state.name}
               onChange={this.handleChange("name")}
@@ -67,12 +67,12 @@ class roomForm extends React.Component {
               onChange={this.handleChange("details")}
             />
           </label>
-          <span className="q">What's this room about?</span>
+          <span className="q">What's this channels about?</span>
           <div className="private">
             <label>
               <b>Make private</b>
               <p>
-                When a room is set to private, it can only be viewed or
+                When a channels is set to private, it can only be viewed or
                 joined by invitation.
               </p>
             </label>
@@ -85,7 +85,7 @@ class roomForm extends React.Component {
               <span className="slider round"></span>
             </label>
           </div>
-          <div className="room-form-options">
+          <div className="channels-form-options">
             <span>ⓘ &nbsp; Learn More</span>
             <button>Create</button>
           </div>
@@ -95,4 +95,4 @@ class roomForm extends React.Component {
   }
 }
 
-export default roomForm;
+export default channelsForm;

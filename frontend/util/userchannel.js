@@ -1,13 +1,13 @@
-export const fetchUserrooms = () => {
+export const fetchUserchannelss = () => {
     return $.ajax({
-        url: `/api/user_rooms/`,
+        url: `/api/user_channelss/`,
     });
 };
 
-export const createUserroom = (userroom) => {
+export const createUserchannels = (userchannels) => {
     return $.ajax({
-        url: `/api/user_rooms/`,
+        url: `/api/user_channelss/`,
         method: 'POST',
-        data: { userroom }
+        data: { userchannels }
     });
 };
