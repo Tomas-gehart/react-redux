@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rooms/show'
     namespace :api, defaults: {format: :json} do
       resources :users, only: [:create, :index, :update]
       resource :session, only: [:create, :destroy]
