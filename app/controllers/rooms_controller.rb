@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
- def show
-   @messages = Message.all
+  def show
   end
 end
