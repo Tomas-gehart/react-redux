@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
   get 'rooms/show'
     namespace :api, defaults: {format: :json} do
       resources :users, only: [:create, :index, :update]
