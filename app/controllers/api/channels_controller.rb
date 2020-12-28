@@ -1,46 +1,53 @@
-class Api::channelssController < ApplicationController  
-    
-    def show 
-        @channels = channels.includes(:users).find_by(id: params[:id])
-    end 
+class Api::ChannelsController < ApplicationController
 
-    def index 
-        @channelss = channels.all.includes(:users)
+    skip_before_action :verify_authenticity_token
 
-        byebug
-    end 
-    
-    def create 
-        @channels = channels.new(channelss_params)
-        if @channels.save 
-            render :show #do we need to save users?
+    def index
+        @channels = Channel.all.includes(:users, :messages)
+        render 'api/channels/index'
+    end
+
+    def create
+        @channel = Channel.new(channel_params)
+        if @channel.save
+            if @channel.channel_or_dm == 'channel'
+                if @channel.channel_type == 'public'
+                    @channel.users << User.all
+                elsif @channel.channel_type == 'private'
+                    @channel.users << current_user
+                end
+            elsif @channel.channel_or_dm == 'dm'
+                params[:channel][:users].each do |user|
+                @channel.users << User.find_by(email: user)
+            end
+            @channel.users << current_user
+            end
+            render 'api/channels/show'
         else
-            render @channels.errors.full_messages, status: 400
+            render json: @channel.errors.full_messages, status: 422
         end
     end
 
-    def update 
-        @channels = channels.find(params[:id])
-        if @channels.update(channelss_params)
-            render :show 
+    def show
+        @channel = Channel.find(params[:id])
+        render 'api/channels/show'
+    end
+
+    def update
+        @channel = Channel.find(params[:id])
+        if @channel.update(channel_params)
         else
-            render json: @channels.errors.full_messages, status: 422
+            render json: {errors: @channel.errors.full_messages, status: 422}
         end
     end
 
-    def destroy 
-        @channels = channels.find(params[:id])
-        if @channels.destroy 
-            render :show 
-        else
-             render json: @channels.errors.full_messages, status: 422
-        end
+    def destroy
+        @channel = Channel.find(params[:id])
+        @channel.destroy
     end
 
-
-    private 
-
-    def channelss_params
-        params.require(:channels).permit(:name, :description, :admin_id, :private)
+    def channel_params
+        params.require(:channel).permit(:title, :channel_type, :description, :topic, :user_id, :users, :channel_or_dm)
     end
+
 end
