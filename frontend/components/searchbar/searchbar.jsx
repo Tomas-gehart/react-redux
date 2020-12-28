@@ -26,7 +26,8 @@ export default class Searchbar extends React.Component {
     const messageInput = [ //our placeholder for searchbar
       "Search all across 6lack",
       "Find you collaboration",
-      "The world is yours, find it"
+      "The world is yours, find it",
+      'Find your team'
 
     ];
 
@@ -92,7 +93,7 @@ export default class Searchbar extends React.Component {
 
     return (
       <>
-        <form id="search-form" onSubmit={() => event.preventDefault()}>
+        <form id="search-form" onSubmit={() => event.preventDefault()}> 
           <i className="fas fa-search gray"></i>
           <input
             id="search-input"
