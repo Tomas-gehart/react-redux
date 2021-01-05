@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 class ChannelSidebar extends React.Component{
     constructor(props){
         super();
@@ -45,6 +47,6 @@ class ChannelSidebar extends React.Component{
         
         
     }
-}
+};
 
 export default ChannelSidebar;

@@ -1,10 +1,4 @@
-//AJAX REQUESTS//
-
 import * as MessageApiUtil from '../util/message';
-//
-
-//TYPE CONSTANTS//
-
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
 export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 export const RECEIVE_MESSAGE_ERRORS = 'RECEIVE_MESSAGE_ERRORS';
