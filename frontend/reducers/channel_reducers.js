@@ -1,21 +1,22 @@
-import { RECEIVE_channelsS, RECEIVE_channels, REMOVE_channels} from "../actions/channels_action";
+import {RECEIVE_CHANNELS, RECEIVE_CHANNEL, REMOVE_CHANNEL} from '../actions/channel_actions';
 
-const channelsReducer = (prevState = {}, action) => {
-    Object.freeze(prevState);
-    const nextState = Object.assign({}, prevState)
+
+const channelsReducer = (defaultState = {}, action) => {
+
+
+    Object.freeze(defaultState);
 
     switch (action.type) {
-        case RECEIVE_channelsS:
-            return Object.assign(action.channelss, nextState);
-        case RECEIVE_channels:
-             nextState[action.channels.id] = action.channels;
-             return nextState;
-        case REMOVE_channels:
-            delete nextState[action.channels.id];
+        case RECEIVE_CHANNELS:
+            return action.channels;
+        case RECEIVE_CHANNEL:
+            return Object.assign({}, defaultState, {[action.channel.id]: action.channel})
+        case REMOVE_CHANNEL:
+            let nextState = Object.assign({}, defaultState);
+            delete nextState[action.channel.id];
             return nextState;
-
         default:
-            return state;
+            return defaultState;
     }
 }
 
