@@ -4,7 +4,7 @@ moment().format();
 
 class NewDMForm extends React.Component {
   constructor(props) {
-    super(props);
+    super();
 
     this.state = {
       title: "",
@@ -64,3 +64,6 @@ class NewDMForm extends React.Component {
       return allUsers.sort().join(", ");
     } else return this.state.title;
   }
+}
+
+export default NewDMForm;
