@@ -4,10 +4,7 @@ import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashHeaderContainer from "./splash_header_container";
-
-
-
-
+import ChannelViewportContainer from './channel_viewport';
 
 
 const App = () => (

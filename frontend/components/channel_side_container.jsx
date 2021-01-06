@@ -1,8 +1,8 @@
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
-import {fetchChannels,fetchChannel,createChannel,updateChannel,deleteChannel} from '../../actions/channel_actions'; //rework actions
-import {fetchUsers} from '../../actions/user_actions';
-import { openModal } from '../../actions/modal_actions'; //rework
+import {fetchChannels,fetchChannel,createChannel,updateChannel,deleteChannel} from '../actions/channel_action'; //rework actions
+import {fetchUsers} from '../actions/user_action';
+import { openModal } from '../actions/modal_actions'; //rework
 import ChannelSidebar from './channel_sidebar';
 
 const msp = (state, ownProps) => {

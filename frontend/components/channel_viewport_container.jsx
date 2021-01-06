@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {logout} from '../../actions/session_actions';
-import {openModal} from '../../actions/modal_actions';
+import {openModal} from '../actions/modal_actions';
 import {updateUser} from '../../actions/user_actions';
 import ChannelViewport from './channel_viewport';
 

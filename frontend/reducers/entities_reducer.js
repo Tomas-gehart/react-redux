@@ -1,8 +1,7 @@
 import {combineReducers} from 'redux';
-
-import usersReducer from './users_reducer';
-import channelsReducer from './channels_reducer';
-import messagesReducer from './messages_reducer';
+import usersReducer from './users_reducers';
+import channelsReducer from './channel_reducers';
+import messagesReducer from './message_reducer';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,

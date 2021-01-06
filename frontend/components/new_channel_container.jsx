@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import NewChannelForm from './new_channel_form';
-import { createChannel, clearErrors } from '../../actions/channel_actions';
-import { closeModal } from '../../actions/modal_actions';
+import { createChannel, clearErrors } from '../actions/channel_action';
+import { closeModal } from '../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 const msp = state => {

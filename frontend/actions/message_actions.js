@@ -1,11 +1,8 @@
-import * as MessageApiUtil from '../util/message';
+import * as MessageApiUtil from '../util/message_api_util';
 export const RECEIVE_MESSAGES = 'RECEIVE_MESSAGES';
 export const RECEIVE_MESSAGE = 'RECEIVE_MESSAGE';
 export const RECEIVE_MESSAGE_ERRORS = 'RECEIVE_MESSAGE_ERRORS';
 
-//
-
-//REGULAR ACTION CREATORS//
 
 export const receiveMessages = (messages) => {
     return {
@@ -27,8 +24,6 @@ export const receiveErrors = (errors) => {
         errors
     }
 }
-
-//THUNK ACTION CREATORS
 
 export const fetchMessages = (channelId) => dispatch => (
     MessageApiUtil.getMessages(channelId).then(messages => (dispatch(receiveMessages(messages)))));

@@ -1,8 +1,7 @@
 import React from "react";
-
-import ChannelSidebarContainer from "./channel_sidebar_container";
-import ChannelContainer from "./channel_container";
-import SearchbarContainer from "../searchbar/searchbar_container";
+import ChannelSidebarContainer from "./channel_side_container";
+import ChannelContainer from "./new_channel_container";
+import SearchbarContainer from "./searchbar_container";
 
 class ChannelViewport extends React.Component {
   constructor(props) {
