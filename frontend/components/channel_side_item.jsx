@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 class ChannelSidebarItem extends React.Component {
   constructor(props) {
-    super();
+    super(props);
   }
 
   render() {

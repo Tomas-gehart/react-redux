@@ -9,6 +9,7 @@ const msp = state => {
         currentUser: state.session.user,
         channels: state.entities.channels,
         messages: state.entities.messages,
+        currentUserEmail: state.entities.users[state.session.user.id].email
     }
 }
 

@@ -1,11 +1,11 @@
-export const RECEIVE_USER_channelsS = 'RECEIVE_USER_channelsS';
+export const RECEIVE_USER_channels = 'RECEIVE_USER_channels';
 export const RECEIVE_USER_channels = 'RECEIVE_USER_channels';
 import * as userchannelsAPI from '../util/userchannels_api_util';
 
-export const receiveUserchannelss = (user_channelss) => {
+export const receiveUserchannels = (user_channels) => {
     return {
-        type: RECEIVE_USER_channelsS,
-        user_channelss
+        type: RECEIVE_USER_channels,
+        user_channels
     };
 };
 
@@ -16,8 +16,8 @@ export const receiveUserchannels = (payload) => {
     };
 };
 
-export const fetchUserchannelss = () => (dispatch) => {
-    return userchannelsAPI.fetchUserchannelss().then(res => dispatch(receiveUserchannelss(res)));
+export const fetchUserchannels = () => (dispatch) => {
+    return userchannelsAPI.fetchUserchannels().then(res => dispatch(receiveUserchannels(res)));
 };
 
 export const createUserchannels = (userchannels) => (dispatch) => {

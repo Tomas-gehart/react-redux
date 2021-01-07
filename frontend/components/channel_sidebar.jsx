@@ -1,10 +1,9 @@
 import React from 'react';
+import ChannelSidebarItem from './channel_side_item';
 
-
-//https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 class ChannelSidebar extends React.Component{
     constructor(props){
-        super();
+        super(props);
 
         this.state = {
             title: '',
@@ -31,10 +30,9 @@ class ChannelSidebar extends React.Component{
         const channel = Object.assign({}, this.state);
         this.props.createChannel(channel);
     };
-    
-    
-    //https://medium.com/path2code/how-react-js-toggle-button-works-99c838ae2fe1#:~:text=Function%20to%20make%20Toggle%20Button%20works&text=It%20causes%20React%20to%20re,passing%20a%20function%20into%20this.
+
     toggleChannels() {
+
         const channelsUl = document.getElementById("channels-ul");
 
         if (channelsUl.style.display === "none") {
@@ -46,11 +44,11 @@ class ChannelSidebar extends React.Component{
         const caret = document.getElementById("channels-caret");
 
         caret.classList.toggle("caret-toggled");
-
     };
 
     toggleDms() {
-                const dmsUl = document.getElementById("dms-ul");
+
+        const dmsUl = document.getElementById("dms-ul");
 
         if (dmsUl.style.display === "none") {
             dmsUl.style.display = "block";
@@ -63,13 +61,123 @@ class ChannelSidebar extends React.Component{
         caret.classList.toggle("caret-toggled");
     };
 
-
-
     render(){
 
         
-        
+        this.channelsArray = Object.values(this.props.channels).sort((a,b) => {
+            const aTitle = a.title.toUpperCase();
+            const bTitle = b.title.toUpperCase();
+            if (aTitle < bTitle) {
+                return -1;
+            } else if (aTitle > bTitle) {
+                return 1;
+            } else return 0;
+        });
+
+        return (
+          <div className="channels-wrapper">
+            <div className="workspace-box">
+              <p>
+                Your Workspace&nbsp;&nbsp;
+                <i className="fas fa-chevron-down"></i>
+              </p>
+
+              <div className="user-name">
+                <i className="fas fa-circle" />
+                &nbsp;{this.props.currentUser.email}
+              </div>
+            </div>
+
+            <div className="channels">
+              <div className="channels-toogle">
+                <div className="channels-header">
+                  <i id="channels-caret" className="fas fa-caret-down"></i>
+
+                  <button
+                    className="channels-toggle-button"
+                    onClick={this.toggleChannels}
+                  >
+                    Channels
+                  </button>
+
+                  <a onClick={() => this.props.openModal("addChannel")}>
+                    <i className="fas fa-plus channel-fa-plus"></i>
+                  </a>
+                </div>
+
+                <ul id="channels-ul" className="channels-ul">
+                  {this.channelsArray.map((channel) => {
+                    let userIds = channel.users.map((user) => user.id);
+
+                    const currentUserIsMember = userIds.includes(
+                      this.props.currentUser.id
+                    );
+
+                    if (
+                      channel.channel_or_dm === "channel" &&
+                      currentUserIsMember
+                    ) {
+                      return (
+                        <ChannelSidebarItem
+                          key={channel.id}
+                          channel={channel}
+                          currentChannelId={this.props.currentChannelId}
+                          currentUser={this.props.currentUser}
+                        />
+                      );
+                    }
+                  })}
+                </ul>
+              </div>
+
+              <div className="channels-toogle">
+                <div className="channels-header">
+                  <i id="dms-caret" className="fas fa-caret-down"></i>
+
+                  <button
+                    className="dms-toggle-button"
+                    onClick={this.toggleDms}
+                  >
+                    Direct messages
+                  </button>
+
+                  <a onClick={() => this.props.openModal("addDM")}>
+                    <i className="fas fa-plus dm-fa-plus"></i>
+                  </a>
+                </div>
+
+                <ul id="dms-ul" className="dms-ul">
+                  {this.channelsArray.map((channel) => {
+                    let userIds = channel.users.map((user) => user.id);
+
+                    const currentUserIsMember = userIds.includes(
+                      this.props.currentUser.id
+                    );
+
+                    const channelDisplayTitle = channel.title.split(', ').filter(user => user !== this.props.currentUser.email).join(", ");
+
+                    const onlineUsers = Object.values(this.props.users).filter(user => user.online_status).map(user => user.email);
+
+                    const onlineStatus = onlineUsers.includes(channelDisplayTitle);
+
+                    if (channel.channel_or_dm === "dm" && currentUserIsMember) {
+                      return (
+                        <ChannelSidebarItem
+                          key={channel.id}
+                          channel={channel}
+                          currentChannelId={this.props.currentChannelId}
+                          currentUser={this.props.currentUser}
+                          onlineStatus={onlineStatus}
+                        />
+                      );
+                    }
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        );
     }
-};
+}
 
 export default ChannelSidebar;

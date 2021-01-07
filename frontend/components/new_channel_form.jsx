@@ -27,17 +27,17 @@ class NewChannelForm extends React.Component {
     };
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li className="channel-error" key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  //renderErrors() {
+  //  return (
+  //    <ul>
+  //      {this.props.errors.map((error, i) => (
+  //        <li className="channel-error" key={`error-${i}`}>
+  //          {error}
+  //        </li>
+  //      ))}
+  //    </ul>
+  //  );
+  //}
 
   handleSubmit(event) {
     event.preventDefault();
@@ -91,7 +91,7 @@ class NewChannelForm extends React.Component {
 
           <div>
             Name
-            {this.renderErrors()}
+   
             <br />
             <input
               autoFocus="on"

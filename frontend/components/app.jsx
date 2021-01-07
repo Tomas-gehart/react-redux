@@ -7,12 +7,13 @@ import SplashHeaderContainer from "./splash_header_container";
 import ChannelViewportContainer from './channel_viewport';
 
 
+
 const App = () => (
   <div className="top-div">
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={SplashHeaderContainer} />
-    <ProtectedRoute path='/channels/:channelId' component={ChannelViewportContainer}/>
+    <Route path="/channels" component={ChannelViewportContainer}/>
 
   </div>
 );

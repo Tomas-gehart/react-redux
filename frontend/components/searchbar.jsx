@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 export default class Searchbar extends React.Component {
   constructor(props) {
-    super();
+    super(props);
 
-    this.state = { searchValue: "" }; //search via string val
+    this.state = { searchValue: "" };
 
-    this.filteredChannelsArray = Object.values(this.props.channels) //rework this
-      .filter((channel) => { //filter by channel
+    this.filteredChannelsArray = Object.values(this.props.channels)
+      .filter((channel) => {
         return channel.users
           .map((user) => user.id)
           .includes(this.props.currentUser.id);
       })
-      .sort((a, b) => { //rework this logic
-        const aTitle = a.title.toUpperCase(); //method returns the calling string value converted to uppercase
-        const bTitle = b.title.toUpperCase(); //method returns the calling string value converted to uppercase
+      .sort((a, b) => {
+        const aTitle = a.title.toUpperCase();
+        const bTitle = b.title.toUpperCase();
         if (aTitle < bTitle) {
           return -1;
         } else if (aTitle > bTitle) {
@@ -23,23 +23,26 @@ export default class Searchbar extends React.Component {
         } else return 0;
       });
 
-    const messageInput = [ //our placeholder for searchbar
-      "Search all across 6lack",
-      "Find you collaboration",
-      "The world is yours, find it",
-      'Find your team'
-
+    const placeholderMessages = [
+      "Search for something. Anything. You have the window open now anyway.",
+      "Search the Log of All Conversation and Knowledge",
+      "Search all across Slick",
+      "Surely that's around here somewhere...",
+      "What do you want to search for today?",
+      "Delve into your archives, seize upon the answers. Rejoice.",
+      "Type what you want to search for. Slick will do the rest.",
+      "Input search. Beep boop.",
     ];
 
     const randomNum = (max) => {
-      return Math.floor(Math.random() * max + 1); //random placeholder
+      return Math.floor(Math.random() * max + 1);
     };
 
     this.placeholderText =
-      messageInput[randomNum(messageInput.length - 1)]; //random placeholder each time
+      placeholderMessages[randomNum(placeholderMessages.length - 1)];
   }
 
-  handleInput(type) { //handle input, check this
+  handleInput(type) {
     return (event) => {
       this.setState({
         [type]: event.target.value,
@@ -50,13 +53,13 @@ export default class Searchbar extends React.Component {
   displayTitle(title) {
     const channelDisplayTitleArray = title.split(", ");
     const currentUserRemoved = channelDisplayTitleArray.filter(
-      (user) => user !== this.props.currentUserEmail //add currentUserEmail to container
+      (user) => user !== this.props.currentUserEmail
     );
     return currentUserRemoved.join(", ");
   }
 
   render() {
-    const Result = (
+    const searchResults = (
       <>
         <div id="search-filler">Results:</div>
         <ul>
@@ -89,11 +92,12 @@ export default class Searchbar extends React.Component {
         </ul>
       </>
     );
-    const noResult = <div id="search-filler">Narrow your search</div>;
+
+    const noSearchResults = <div id="search-filler">Narrow your search</div>;
 
     return (
       <>
-        <form id="search-form" onSubmit={() => event.preventDefault()}> 
+        <form id="search-form" onSubmit={() => event.preventDefault()}>
           <i className="fas fa-search gray"></i>
           <input
             id="search-input"
@@ -110,7 +114,36 @@ export default class Searchbar extends React.Component {
           </a>
         </form>
 
-        {this.state.searchValue ? Result : noResult}
+        {this.state.searchValue ? searchResults : noSearchResults}
+
+        {/* <ul>
+          {this.filteredChannelsArray.map((channel) => {
+            let prefix;
+
+            if (channel.channel_or_dm === "channel") {
+              if (channel.channel_type === "public") {
+                prefix = "#";
+              } else prefix = <i className="fas fa-lock"></i>;
+            } else prefix = "#";
+
+            if (
+              channel.title.toLowerCase().startsWith(this.state.searchValue) &&
+              this.state.searchValue != ""
+            ) {
+              return (
+                <Link
+                  onClick={() => this.props.closeModal()}
+                  className="search-li"
+                  to={`/channels/${channel.id}`}
+                >
+                  {prefix}
+                  {channel.title}
+                  <br></br>
+                </Link>
+              );
+            } else return null;
+          })}
+        </ul> */}
       </>
     );
   }

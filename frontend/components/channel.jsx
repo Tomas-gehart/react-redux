@@ -1,10 +1,10 @@
 import React from 'react';
-import MessagesViewportContainer from '../messages/messages_viewport_container';
-import NewMessageFormContainer from '../messages/new_message_form_container';
+import MessagesViewportContainer from './messages_viewport_container';
+import NewMessageFormContainer from './new_message_form_container';
 
 class Channel extends React.Component{
     constructor(props){
-        super()
+        super(props)
         this.state = {messages : []};
     }
 
