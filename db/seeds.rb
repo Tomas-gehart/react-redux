@@ -36,3 +36,4 @@ channels_3 = Channel.create!(admin_id: sean.id, name: "label-meeting", is_privat
 #Message.create!(body:"I want to drop a new project", 	channels_id: channels_3.id, sender_id: jermaine.id)
 #Message.create!(body:"Finally!", 	channels_id: channels_3.id, sender_id: sean.id)
 #Message.create!(body:"Let's do it", 	channels_id: channels_3.id, sender_id: aubrey.id)
+

@@ -4,7 +4,7 @@ import NewMessageFormContainer from './new_message_form_container';
 
 class Channel extends React.Component{
     constructor(props){
-        super(props)
+        super()
         this.state = {messages : []};
     }
 

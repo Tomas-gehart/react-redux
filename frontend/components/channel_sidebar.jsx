@@ -84,7 +84,7 @@ class ChannelSidebar extends React.Component{
 
               <div className="user-name">
                 <i className="fas fa-circle" />
-                &nbsp;{this.props.currentUser.email}
+
               </div>
             </div>
 

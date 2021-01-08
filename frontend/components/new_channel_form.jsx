@@ -2,7 +2,7 @@ import React from "react";
 
 class NewChannelForm extends React.Component {
   constructor(props) {
-    super();
+    super(props);
 
     this.state = {
       title: "",
@@ -27,17 +27,6 @@ class NewChannelForm extends React.Component {
     };
   }
 
-  //renderErrors() {
-  //  return (
-  //    <ul>
-  //      {this.props.errors.map((error, i) => (
-  //        <li className="channel-error" key={`error-${i}`}>
-  //          {error}
-  //        </li>
-  //      ))}
-  //    </ul>
-  //  );
-  //}
 
   handleSubmit(event) {
     event.preventDefault();
@@ -85,13 +74,13 @@ class NewChannelForm extends React.Component {
 
         <div id="modal-body">
           <p>
-            Channels are where your team communicates. They’re best when
-            organized around a topic — #marketing, for example.
+            Channels are where your team collaborates. They’re best when
+            organized around a topic — #hiphop, for example.
           </p>
 
           <div>
             Name
-   
+  
             <br />
             <input
               autoFocus="on"
@@ -108,7 +97,7 @@ class NewChannelForm extends React.Component {
                 document.getElementById("new-channel-title").style =
                   "box-shadow: none;";
               }}
-              placeholder="# e.g. collab"
+              placeholder="# e.g. plan-budget"
             />
           </div>
 

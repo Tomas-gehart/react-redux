@@ -26,11 +26,11 @@ export default class Searchbar extends React.Component {
     const placeholderMessages = [
       "Search for something. Anything. You have the window open now anyway.",
       "Search the Log of All Conversation and Knowledge",
-      "Search all across Slick",
+      "Search all across 6lack",
       "Surely that's around here somewhere...",
       "What do you want to search for today?",
       "Delve into your archives, seize upon the answers. Rejoice.",
-      "Type what you want to search for. Slick will do the rest.",
+      "Type what you want to search for. 6lack will do the rest.",
       "Input search. Beep boop.",
     ];
 

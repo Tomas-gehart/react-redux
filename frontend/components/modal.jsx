@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { closeModal } from '../actions/modal_actions';
-import SearchbarContainer from './searchbar_container';
+import NewChannelContainer from './new_channel_container';
+import NewDMContainer from './new_direct_message_container';
+import SearchbarContainer from './searchbar_container.jsx';
 
 function Modal({ modal, closeModal }) {
 
@@ -15,13 +17,19 @@ function Modal({ modal, closeModal }) {
 
     switch (modal) {
         case "addChannel":
-            component = <NewChannelContainer/>; //build this
+            component = <NewChannelContainer/>;
+            modalClass = "modal-child";
+            modalBackgroundClass = "modal-background"
             break;
-        case "addDirectMessage":
-            component = <NewDMContainer/>; //build this
+        case "addDM":
+            component = <NewDMContainer/>;
+            modalClass = "dm-modal-child";
+            modalBackgroundClass = "modal-background";
             break;
-        case "searchChannel":
+        case "search":
             component = <SearchbarContainer/>;
+            modalClass = "search-modal-child"
+            modalBackgroundClass = "search-modal-background";
             break;
         default:
             return null;
@@ -36,16 +44,16 @@ function Modal({ modal, closeModal }) {
     );
 }
 
-const mstp = (state) => {
+const mapStateToProps = (state) => {
     return {
         modal: state.ui.modal,
     };
 };
 
-const mdtp = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         closeModal: () => dispatch(closeModal()),
     };
 };
 
-export default connect(mstp, mdtp)(Modal);
+export default connect(mapStateToProps, mapDispatchToProps)(Modal);
