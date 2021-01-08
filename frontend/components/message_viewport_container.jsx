@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import MessagesViewport from './messages_viewport';
-import {fetchMessages} from '../../actions/message_actions';
+import MessagesViewport from './message_viewport';
+import {fetchMessages} from '../actions/message_actions';
 
 const msp = (state, ownProps) => {
     return {

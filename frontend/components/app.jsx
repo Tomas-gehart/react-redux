@@ -15,7 +15,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={SplashHeaderContainer} />
-    <Route path="/channels" component={ChannelViewportContainer}/>
+    <Route path="/channels/:channelIds" component={ChannelViewportContainer}/>
 
   </div>
 );

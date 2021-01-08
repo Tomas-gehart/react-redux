@@ -1,0 +1,44 @@
+.message-form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    bottom: 5px;
+    width: calc(100% - 260px);
+    background: white;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #989798;
+    border-radius: 4px;
+    width: 98%;
+    background: white;
+}
+
+.message-form-input {
+    margin-left: 5px;
+    height: 35px;
+    border: none;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    background-color: transparent;
+    width: 95%;
+    font-size: 16px;
+}
+
+.fa-paper-plane {
+    margin-right: 10px;
+    color: #989898;
+}
+
+.message-form-input:hover, .message-form-input:focus {
+    outline: none;
+}
+
+.message-form-input::placeholder {
+    color: #989898;
+}

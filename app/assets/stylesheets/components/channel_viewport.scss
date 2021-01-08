@@ -1,0 +1,93 @@
+.channel-viewport {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 260px auto;
+}
+
+.search-bar {
+    height: 40px;
+    background-color: #350D36;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-inner-div {
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B4A7B4;
+    width: 500px;
+    box-shadow: inset 0 0 0 1px rgb(104,74,104);
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.search-inner-div:hover {
+    background: rgb(73,37,74);
+    box-shadow: inset 0 0 0 1px rgb(154,134,155);
+    color: white;
+    cursor: pointer;
+}
+
+.fa-search button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+.logout {
+    position: absolute;
+    right: 20px;
+    color: #B4A7B4;
+}
+
+.logout:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.channel-header {
+    width: 100%;
+    height: 69.44px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #E2E1E1;
+}
+
+.channel-header-left {
+    margin: 20px 20px 20px 20px;
+}
+
+.channel-header-right {
+    margin-right: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.channel-title {
+    font-size: 14px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.dm-title {
+    font-size: 18px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.subs-pins-addtopic {
+    font-size: 14px;
+}

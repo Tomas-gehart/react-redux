@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 
 import MessageItem from './message_item';
 
-import { updateMessage, fetchMessages } from '../../actions/message_actions';
+import { updateMessage, fetchMessages } from '../actions/message_actions';
 
 const msp = state => {
     return {

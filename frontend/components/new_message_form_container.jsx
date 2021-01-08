@@ -1,6 +1,6 @@
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createMessage } from '../../actions/message_actions';
+import { createMessage } from '../actions/message_actions';
 
 import NewMessageForm from './new_message_form';
 

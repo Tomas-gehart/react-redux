@@ -1,5 +1,5 @@
 import React from 'react';
-import MessagesViewportContainer from './messages_viewport_container';
+import MessagesViewportContainer from './message_viewport_container';
 import NewMessageFormContainer from './new_message_form_container';
 
 class Channel extends React.Component{
