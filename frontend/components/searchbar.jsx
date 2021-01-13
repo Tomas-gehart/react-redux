@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default class Searchbar extends React.Component {
   constructor(props) {
+    //https://www.blog4js.com/2020/10/07/why-is-super-deprecated-in-a-react-class-component/
     super(props);
 
     this.state = { searchValue: "" };
