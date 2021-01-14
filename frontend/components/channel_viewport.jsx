@@ -11,7 +11,6 @@ class ChannelViewport extends React.Component {
 
   handleLogout(event) {
     const user = {
-      email: this.props.currentUser.email,
       id: this.props.currentUser.id,
       online_status: false,
     };
