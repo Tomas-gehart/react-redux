@@ -155,7 +155,7 @@ class NewDMForm extends React.Component {
 
     if (this.state.users.length !== 0) {
       inputPlaceholder = "";
-    } else inputPlaceholder = "Find or start a conversation";
+    } else inputPlaceholder = "Find or start a collaboration";
 
     return (
       <div>
@@ -220,7 +220,7 @@ class NewDMForm extends React.Component {
         }
 
         <ul id="search-results-ul">
-          <div id="recent-dms">Recent conversations</div>
+          <div id="recent-dms">Recent collaborations</div>
           {this.state.searchValue // if there's something in the search value
             ? allChannelsArray.map((channel) => {
                 let lastMessage;

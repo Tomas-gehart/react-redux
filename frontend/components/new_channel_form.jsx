@@ -97,7 +97,7 @@ class NewChannelForm extends React.Component {
                 document.getElementById("new-channel-title").style =
                   "box-shadow: none;";
               }}
-              placeholder="# e.g. plan-budget"
+              placeholder="# e.g. plan-album-release"
             />
           </div>
 
