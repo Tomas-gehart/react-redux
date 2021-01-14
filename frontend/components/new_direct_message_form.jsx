@@ -65,18 +65,18 @@ class NewDMForm extends React.Component {
     } else return this.state.title;
   }
 
-  renderErrors() {
-    return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li className="error" key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
-  }
-
+  //renderErrors() {
+  //  return (
+  //    <ul>
+  //      {this.props.errors.map((error, i) => (
+  //        <li className="error" key={`error-${i}`}>
+  //          {error}
+  //        </li>
+  //      ))}
+  //    </ul>
+  //  );
+  //}
+//
   componentDidUpdate() {
     document.getElementById("dm-search-input").focus();
     const searchButton = document.getElementById("search-button");
@@ -99,7 +99,7 @@ class NewDMForm extends React.Component {
       this.props.users[this.props.currentUser].email
     );
     title = title.sort().join(", ");
-    return Object.values(this.props.channels)
+    return Object.values(this.state.channels)
       .map((channel) => channel.title)
       .includes(title)
       ? true
@@ -447,7 +447,7 @@ class NewDMForm extends React.Component {
                 );
               })}
         </ul>
-        {this.renderErrors()}
+     
       </div>
     );
   }

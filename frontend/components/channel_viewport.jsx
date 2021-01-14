@@ -43,7 +43,7 @@ class ChannelViewport extends React.Component {
             <div
               onClick={() => this.props.openModal("search")}
               className="search-inner-div"
-            >
+              >
               <i className="fas fa-search"></i>
               &nbsp;&nbsp;
               <p>Search Your Workspace</p>
