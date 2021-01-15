@@ -12,7 +12,7 @@ const msp = state => {
         users: state.entities.users,
         currentUser: state.session.user.id,
         errors: state.errors.channel,
-        currentUserEmail: state.entities.users[state.session.user.id].email,
+
         messages: state.entities.messages
     }
 }
