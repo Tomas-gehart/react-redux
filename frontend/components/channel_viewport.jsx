@@ -1,6 +1,6 @@
 import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
-import ChannelContainer from "./new_channel_container";
+import ChannelContainer from "./channel_container";
 
 class ChannelViewport extends React.Component {
   constructor(props) {
@@ -54,7 +54,7 @@ class ChannelViewport extends React.Component {
           </div>
           <div className="channel-viewport">
             <ChannelSidebarContainer />
-            <ChannelContainer />
+            //*<ChannelContainer />*//
           </div>
         </div>
       </>
