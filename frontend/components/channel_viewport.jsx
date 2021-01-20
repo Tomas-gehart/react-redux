@@ -1,6 +1,10 @@
 import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
+import SearchBarContainer from "./searchbar_container";
+import MessageContainer from "./message_viewport_container";
+//import Searchbar from "./searchbar";
+import MessageItem from "./message_item_container";
 
 class ChannelViewport extends React.Component {
   constructor(props) {
@@ -34,27 +38,38 @@ class ChannelViewport extends React.Component {
       });
   }
 
-  render() {
+  render() { 
+
     return (
       <>
         <div id="logged-in-container">
           <div className="search-bar">
             <div
-              onClick={() => this.openModal("search")}
+             
+              // onClick={() => this.props.openModal("search")}
               className="search-inner-div"
               >
-              <i className="fas fa-search"></i>
-              &nbsp;&nbsp;
-              <p>Search Your Workspace</p>
+              <i className="fas fa-search">
+                {/* <SearchBarContainer/> */}
+                
+                
+                
+
+              </i>
+
             </div>
-            <p className="logout" onClick={this.handleLogout}>
-              <i className="fas fa-sign-out-alt"></i>
-              &nbsp;Sign Out
-            </p>
+            {/* <SearchBarContainer/> */}
+            {/* <p className="logout" onClick={this.handleLogout}> */}
+              {/* <i className="fas fa-sign-out-alt"></i> */}
+              {/* &nbsp;Sign Out */}
+            {/* </p>  */}
           </div>
           <div className="channel-viewport">
             <ChannelSidebarContainer />
-            //*<ChannelContainer />*//
+            {/* <SearchBarContainer/>  */}
+            <ChannelContainer />
+            <MessageItem/>
+
           </div>
         </div>
       </>

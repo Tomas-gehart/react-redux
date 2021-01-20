@@ -1,0 +1,1 @@
+json.extract! channel, :id, :title, :channel_type, :description, :topic, :messages, :users, :channel_or_dm

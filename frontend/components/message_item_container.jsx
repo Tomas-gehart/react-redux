@@ -6,7 +6,7 @@ import { updateMessage, fetchMessages } from '../actions/message_actions';
 
 const msp = state => {
     return {
-        currentUserId: state.entities.users[state.session.user.id].id
+       currentUserId: state.entities.users[state.session.user.id].id
     }
 }
 
