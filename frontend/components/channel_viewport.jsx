@@ -2,9 +2,6 @@ import React from "react";
 import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
 import SearchBarContainer from "./searchbar_container";
-import MessageContainer from "./message_viewport_container";
-//import Searchbar from "./searchbar";
-import MessageItem from "./message_item_container";
 
 class ChannelViewport extends React.Component {
   constructor(props) {
@@ -44,13 +41,11 @@ class ChannelViewport extends React.Component {
       <>
         <div id="logged-in-container">
           <div className="search-bar">
-            <div
-             
-              // onClick={() => this.props.openModal("search")}
-              className="search-inner-div"
-              >
-              <i className="fas fa-search">
-                {/* <SearchBarContainer/> */}
+            <div className="search-inner-div" >
+              <SearchBarContainer/>
+              <i className="fas fa-search">         
+                {/* <SearchBarContainer/>  */}
+                
                 
                 
                 
@@ -66,9 +61,9 @@ class ChannelViewport extends React.Component {
           </div>
           <div className="channel-viewport">
             <ChannelSidebarContainer />
-            {/* <SearchBarContainer/>  */}
+            
             <ChannelContainer />
-            <MessageItem/>
+            {/* <MessageItem/> */}
 
           </div>
         </div>

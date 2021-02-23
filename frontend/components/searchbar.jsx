@@ -25,14 +25,12 @@ export default class Searchbar extends React.Component {
       });
 
     const placeholderMessages = [
-      "Search for something. Anything. You have the window open now anyway.",
-      "Search the Log of All Conversation and Knowledge",
+      "Search for your collaborations, find that song.",
+      "Search for your collaborations, find the artist.",
       "Search all across 6lack",
-      "Surely that's around here somewhere...",
+      "The music is somewhere...",
       "What do you want to search for today?",
-      "Delve into your archives, seize upon the answers. Rejoice.",
       "Type what you want to search for. 6lack will do the rest.",
-      "Input search. Beep boop.",
     ];
 
     const randomNum = (max) => {
@@ -117,34 +115,6 @@ export default class Searchbar extends React.Component {
 
         {this.state.searchValue ? searchResults : noSearchResults}
 
-        {/* <ul>
-          {this.filteredChannelsArray.map((channel) => {
-            let prefix;
-
-            if (channel.channel_or_dm === "channel") {
-              if (channel.channel_type === "public") {
-                prefix = "#";
-              } else prefix = <i className="fas fa-lock"></i>;
-            } else prefix = "#";
-
-            if (
-              channel.title.toLowerCase().startsWith(this.state.searchValue) &&
-              this.state.searchValue != ""
-            ) {
-              return (
-                <Link
-                  onClick={() => this.props.closeModal()}
-                  className="search-li"
-                  to={`/channels/${channel.id}`}
-                >
-                  {prefix}
-                  {channel.title}
-                  <br></br>
-                </Link>
-              );
-            } else return null;
-          })}
-        </ul> */}
       </>
     );
   }
