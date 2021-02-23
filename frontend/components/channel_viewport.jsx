@@ -3,6 +3,7 @@ import ChannelSidebarContainer from "./channel_side_container";
 import ChannelContainer from "./channel_container";
 import SearchBarContainer from "./searchbar_container";
 
+
 class ChannelViewport extends React.Component {
   constructor(props) {
     super(props);
