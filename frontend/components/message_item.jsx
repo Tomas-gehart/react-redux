@@ -48,12 +48,13 @@
       wrapper.classList.remove("beige");
       wrapper.classList.add("message-wrapper");
     }
+}
   
   edited() {
     if (this.props.message.updated_at > this.props.message.created_at) {
       return "(Edited)";
     } else return null;
-}
+  }
   
   render() {
     if (this.props.message.user.id === this.props.currentUserId) {
