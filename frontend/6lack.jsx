@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             session: {user: {channel: window.generalChannel}},
             }
         store = configureStore(preloadedState);
-        delete window.currentChannel
+        delete window.currentChannel;
     }
 
     window.dispatch = store.dispatch;

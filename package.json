@@ -2,6 +2,7 @@
   "name": "rail-project-name",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
@@ -11,6 +12,7 @@
     "actioncable": "^5.2.4-4",
     "actioncable-js": "^5.0.0-rc2",
     "apollo-client": "^2.6.10",
+    "axios": "^0.21.1",
     "formik": "^2.2.1",
     "graphql": "^15.4.0",
     "graphql-react": "^12.0.1",
@@ -20,6 +22,7 @@
     "moment": "^2.29.1",
     "react": "^16.13.1",
     "react-apollo": "^3.1.5",
+    "react-chat-engine": "^1.8.13",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.2.3",
     "react-native-youtube": "^2.0.1",
