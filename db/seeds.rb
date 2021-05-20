@@ -35,45 +35,6 @@ sean = User.create!(username: "jayz", password: "blueprint", email: "hov@rocafel
 #Message.create!(body:"Finally!", 	channels_id: channels_3.id, sender_id: sean.id)
 #Message.create!(body:"Let's do it", 	channels_id: channels_3.id, sender_id: aubrey.id)
 
-u1 = User.create!(
-    email: 'J Cole',
-    password: 'fridaynightlights',
-    created_at: '1/1/2021',
-    updated_at: '1/1/2021',
-    online_status: false
-)
-
-u1 = User.create!(
-    email: 'Kanye',
-    password: 'collegedropout',
-    created_at: '1/1/2021',
-    updated_at: '1/1/2021',
-    online_status: false
-)
-
-u3 = User.create!(
-    email: 'Billie Ellish',
-    password: 'lovely',
-    created_at: '1/1/2021',
-    updated_at: '1/1/2021',
-    online_status: false
-)
-
-u4 = User.create!(
-    email: 'Meg',
-    password: 'hotgirl',
-    created_at: '1/1/2021',
-    updated_at: '1/1/2021',
-    online_status: false
-)
-
-u5 = User.create!(
-    email: 'Demo',
-    password: 'hellotherestranger',
-    created_at: '1/1/2021',
-    updated_at: '1/1/2021',
-    online_status: false
-)
 
 
 c1 = Channel.create!(

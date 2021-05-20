@@ -6,17 +6,18 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashHeaderContainer from "./splash_header_container";
 import ChannelViewportContainer from './channel_viewport';
 import Modal from './modal';
+// import header_container from "./header._container";
 
 
 
 const App = () => (
   <div className="top-div">
-    <Modal/>
+    <Modal />
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
     <Route exact path="/" component={SplashHeaderContainer} />
-    <Route path="/channels/:channelIds" component={ChannelViewportContainer}/>
-
+    <Route path="/channels/:channelIds" component={ChannelViewportContainer} />
+    {/* <Route path="/channel" component={header_container} /> */}
   </div>
 );
 
