@@ -42,19 +42,19 @@ class ChannelViewport extends React.Component {
       <>
         <div id="logged-in-container">
           <div className="search-bar">
-            <div className="search-inner-div" >
-              {/* <SearchBarContainer/> */}
-              <i className="fas fa-search">         
+           {/*  <div className="search-inner-div" > */}
+              <SearchBarContainer/>
+           {/*    <i className="fas fa-search">    */}      
                 {/* <SearchBarContainer/>  */}
                 
                 
                 
                 
 
-              </i>
+            {/*   </i> */}
 
-            </div>
-            <SearchBarContainer/>
+            {/* </div> */}
+            {/* <SearchBarContainer/> */}
             {/* <p className="logout" onClick={this.handleLogout}> */}
               {/* <i className="fas fa-sign-out-alt"></i> */}
               {/* &nbsp;Sign Out */}

@@ -37,6 +37,6 @@ const mdp = dispatch => (
         receiveMessage: message => dispatch(receiveMessage(message)),
 
     }
-)
+);
 
 export default withRouter(connect(msp,mdp)(Channel));
