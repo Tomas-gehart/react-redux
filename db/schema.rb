@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_14_023851) do
+ActiveRecord::Schema.define(version: 2020_04_09_175316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,14 +25,13 @@ ActiveRecord::Schema.define(version: 2021_01_14_023851) do
   end
 
   create_table "channels", force: :cascade do |t|
+    t.integer "user_id", null: false
     t.string "title", null: false
     t.string "channel_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "topic"
-    t.string "description"
-    t.string "channel_or_dm"
     t.index ["title"], name: "index_channels_on_title", unique: true
+    t.index ["user_id"], name: "index_channels_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -41,28 +40,18 @@ ActiveRecord::Schema.define(version: 2021_01_14_023851) do
     t.text "body", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "user_messages", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "message_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["channel_id"], name: "index_messages_on_channel_id", unique: true
+    t.index ["user_id"], name: "index_messages_on_user_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.string "password_digest"
-    t.string "session_token"
-    t.integer "profile_picture_id"
-    t.string "status"
-    t.string "title"
+    t.string "email", null: false
+    t.string "username", null: false
+    t.string "password_digest", null: false
+    t.string "session_token", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email"
-    t.index ["session_token"], name: "index_users_on_session_token"
-    t.index ["username"], name: "index_users_on_username"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
